@@ -11,10 +11,10 @@ jobs:
 
     steps:
     - name: Checkout Code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Set up JDK 17
-      uses: actions/setup-java@v3
+      uses: actions/setup-java@v4
       with:
         java-version: '17'
         distribution: 'temurin'
@@ -25,17 +25,16 @@ jobs:
 
     - name: Build Modded APK
       run: |
-        java -jar apktool.jar b FrenzyBlast_Decompiled -o FrenzyBlast_Modded.apk
-
-    - name: Sign APK (Debug Key)
-      run: |
-        # Menggunakan debug keystore bawaan Android untuk menandatangani APK agar bisa diinstall
-        sudo apt-get install -y apksigner
-        # Catatan: Kita bisa menambahkan langkah pembuatan keystore jika diperlukan
-        # Untuk tahap ini, kita fokus pada hasil build terlebih dahulu
+        # Memastikan folder decompiled ada sebelum build
+        if [ -d "FrenzyBlast_Decompiled" ]; then
+          java -jar apktool.jar b FrenzyBlast_Decompiled -o FrenzyBlast_Modded.apk
+        else
+          echo "Error: FrenzyBlast_Decompiled directory not found!"
+          exit 1
+        fi
 
     - name: Upload APK Artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: FrenzyBlast-AdMob-Build
         path: FrenzyBlast_Modded.apk
