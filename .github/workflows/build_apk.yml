@@ -21,11 +21,10 @@ jobs:
 
     - name: Download Apktool
       run: |
-        wget https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.9.3.jar -O apktool.jar
+        curl -L https://github.com/iBotPeaches/Apktool/releases/download/v2.9.3/apktool_2.9.3.jar -o apktool.jar
 
     - name: Build Modded APK
       run: |
-        # Memastikan folder decompiled ada sebelum build
         if [ -d "FrenzyBlast_Decompiled" ]; then
           java -jar apktool.jar b FrenzyBlast_Decompiled -o FrenzyBlast_Modded.apk
         else
