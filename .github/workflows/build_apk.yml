@@ -1,4 +1,4 @@
-name: Android APK Build (Dual Game Injection)
+name: Android APK Build & Auto-Release
 
 on:
   push:
@@ -8,6 +8,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # Diperlukan untuk membuat rilis
 
     steps:
     - name: Checkout Code
@@ -35,10 +37,20 @@ jobs:
           java -jar apktool.jar b MergeFruit_Decompiled -o MergeFruit_Modded.apk
         fi
 
-    - name: Upload Artifacts
-      uses: actions/upload-artifact@v4
+    - name: Create GitHub Release
+      uses: softprops/action-gh-release@v1
+      if: success()
       with:
-        name: Injected-Games-Pack
-        path: |
+        tag_name: v${{ github.run_number }}
+        name: Release v${{ github.run_number }} (AdMob Injected)
+        body: |
+          Build Otomatis oleh Omni-AI Agent.
+          
+          Daftar APK Modifikasi:
+          1. Frenzy Blast (AdMob Injected)
+          2. Merge Fruit Master (AdMob Injected)
+        files: |
           FrenzyBlast_Modded.apk
           MergeFruit_Modded.apk
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
