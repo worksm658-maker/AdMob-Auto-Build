@@ -35,43 +35,43 @@ class AIAgent:
     def __init__(self, role="Manager & Developer"):
         self.role = role
         self.memory = AIMemory()
-        logger.info(f"=== Omni-AI Agent 24 Jam Aktif (Target: Rp 111k - 999k) ===")
+        logger.info(f"=== Omni-AI Agent 24 Jam (Rish Vision Enabled) ===")
 
     def read_screen(self):
-        """Mata AI menggunakan OCR Nyata untuk membaca saldo dari layar"""
+        """Mata AI menggunakan Shizuku (Rish) untuk mengambil screenshot sistem"""
         img_path = "vision_input.png"
-        logger.info("[VISION] Memindai layar secara visual...")
-        os.system(f"screencap -p {img_path} || touch {img_path}")
+        logger.info("[VISION] Memindai layar via Shizuku/Rish...")
+        
+        # Perintah sakti via Rish untuk menembus izin sistem
+        os.system(f"../rish -c 'screencap -p' > {img_path}")
         
         try:
             if os.path.exists(img_path) and os.path.getsize(img_path) > 0:
+                # OCR membaca angka saldo
                 text = pytesseract.image_to_string(Image.open(img_path))
                 logger.info(f"[VISION] Hasil Scan: {text[:50].replace('\n', ' ')}")
-                if "Rp" in text:
+                if "Rp" in text or "IDR" in text or "Saldo" in text:
                     return text
-            return "Saldo: Rp 0, Status: Waiting"
-        except:
-            return "Saldo: Rp 0, Status: Vision Off"
+            return "Saldo: Rp 0, Status: No Visual Data"
+        except Exception as e:
+            logger.error(f"[VISION] OCR Error: {e}")
+            return "Saldo: Rp 0, Status: Vision Error"
 
     def calculate_target(self, data):
         kurs_usd = 16000
         try:
-            # Mencari angka setelah 'Rp'
-            parts = data.split("Rp")[1].split()[0].replace(".", "").replace(",", "").strip()
-            saldo = int(''.join(filter(str.isdigit, parts)))
+            # Mencari angka saldo dari teks OCR
+            digits = "".join([c for c in data.split("Rp")[-1].split()[0] if c.isdigit()])
+            saldo = int(digits) if digits else 0
             usd = saldo / kurs_usd
             if saldo >= 111111:
                 return True, f"Rp {saldo:,} (${usd:.2f}) - TARGET TERCAPAI"
             return False, f"Rp {saldo:,} (${usd:.2f}) - MENGEJAR TARGET"
-        except: return False, "Mencari data saldo di layar..."
+        except: return False, "Mencari saldo di layar..."
 
     def send_whatsapp_notification(self, message):
         logger.info("[WHATSAPP] Mengirim laporan...")
         os.system(f"python3 ../whatsapp_business_master.py --send '{message}'")
-
-    def github_cloud_manager(self):
-        logger.info("[CLOUD] Sync ke Cloud...")
-        os.system("git add . && git commit -m 'Auto-Optimize via Vision' && git push origin master --force")
 
     def execute_action(self, action_type):
         logger.info(f"[EKSEKUSI] {action_type}")
@@ -107,9 +107,10 @@ class AIAgent:
             if tercapai:
                 self.execute_action("WITHDRAW_DANA")
             else:
-                self.github_cloud_manager()
+                # Sync ke cloud jika belum tercapai
+                os.system("git add . && git commit -m 'Auto-Sync via Rish Vision' && git push origin master --force")
             
-            time.sleep(3600)
+            time.sleep(3600) # Cek setiap jam
 
 if __name__ == "__main__":
     agent = AIAgent()
