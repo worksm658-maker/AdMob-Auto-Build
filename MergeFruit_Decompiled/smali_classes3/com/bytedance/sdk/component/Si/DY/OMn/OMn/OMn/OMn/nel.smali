@@ -1,0 +1,1071 @@
+.class public Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/nel;
+.super Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/Ks;
+.source "SourceFile"
+
+
+# instance fields
+.field private Ks:Lcom/bytedance/sdk/component/Si/DY/OMn/zAx/DY/OMn;
+
+.field protected OMn:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;Lcom/bytedance/sdk/component/Si/DY/OMn/zAx/DY/OMn;)V
+    .locals 0
+
+    .line 34
+    invoke-direct {p0, p1}, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/Ks;-><init>(Landroid/content/Context;)V
+
+    .line 53
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object p1, p0, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/nel;->OMn:Ljava/util/List;
+
+    .line 35
+    iput-object p2, p0, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/nel;->Ks:Lcom/bytedance/sdk/component/Si/DY/OMn/zAx/DY/OMn;
+
+    if-nez p2, :cond_0
+
+    .line 37
+    invoke-static {}, Lcom/bytedance/sdk/component/Si/DY/OMn/zAx/DY/OMn;->Ks()Lcom/bytedance/sdk/component/Si/DY/OMn/zAx/DY/OMn;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/nel;->Ks:Lcom/bytedance/sdk/component/Si/DY/OMn/zAx/DY/OMn;
+
+    :cond_0
+    return-void
+.end method
+
+.method private DY(IJ)V
+    .locals 4
+
+    .line 197
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    sub-long/2addr v0, p2
+
+    .line 198
+    invoke-virtual {p0}, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/nel;->URh()Landroid/content/Context;
+
+    move-result-object p2
+
+    invoke-virtual {p0}, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/nel;->DY()Ljava/lang/String;
+
+    move-result-object p3
+
+    const/4 v2, 0x2
+
+    new-array v2, v2, [Ljava/lang/String;
+
+    const/4 v3, 0x0
+
+    invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v2, v3
+
+    const/4 v0, 0x1
+
+    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    aput-object p1, v2, v0
+
+    const-string p1, "gen_time <? AND retry >?"
+
+    invoke-static {p2, p3, p1, v2}, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/Ks;->OMn(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
+
+    return-void
+.end method
+
+.method public static Ks(Ljava/lang/String;)Ljava/lang/String;
+    .locals 2
+
+    .line 246
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "CREATE TABLE IF NOT EXISTS "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 247
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p0
+
+    const-string v0, " (_id INTEGER PRIMARY KEY AUTOINCREMENT,id TEXT UNIQUE,value TEXT ,gen_time TEXT , retry INTEGER default 0 , encrypt INTEGER default 0)"
+
+    .line 248
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p0
+
+    .line 255
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method private static OMn(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+
+    .line 308
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-object p0
+
+    :cond_0
+    return-object p1
+.end method
+
+.method private static OMn(Ljava/lang/String;Ljava/util/List;IZ)Ljava/lang/String;
+    .locals 8
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Ljava/util/List<",
+            "*>;IZ)",
+            "Ljava/lang/String;"
+        }
+    .end annotation
+
+    if-eqz p3, :cond_0
+
+    .line 274
+    const-string v0, " IN "
+
+    goto :goto_0
+
+    :cond_0
+    const-string v0, " NOT IN "
+
+    :goto_0
+    if-eqz p3, :cond_1
+
+    .line 275
+    const-string p3, " OR "
+
+    goto :goto_1
+
+    :cond_1
+    const-string p3, " AND "
+
+    :goto_1
+    const/16 v1, 0x3e8
+
+    .line 277
+    invoke-static {p2, v1}, Ljava/lang/Math;->min(II)I
+
+    move-result p2
+
+    .line 278
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    .line 279
+    rem-int v2, v1, p2
+
+    if-nez v2, :cond_2
+
+    .line 281
+    div-int v2, v1, p2
+
+    goto :goto_2
+
+    .line 283
+    :cond_2
+    div-int v2, v1, p2
+
+    add-int/lit8 v2, v2, 0x1
+
+    .line 285
+    :goto_2
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const/4 v4, 0x0
+
+    :goto_3
+    if-ge v4, v2, :cond_4
+
+    mul-int v5, v4, p2
+
+    add-int v6, v5, p2
+
+    .line 288
+    invoke-static {v6, v1}, Ljava/lang/Math;->min(II)I
+
+    move-result v6
+
+    .line 289
+    const-string v7, "\',\'"
+
+    invoke-interface {p1, v5, v6}, Ljava/util/List;->subList(II)Ljava/util/List;
+
+    move-result-object v5
+
+    invoke-static {v7, v5}, Landroid/text/TextUtils;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
+
+    move-result-object v5
+
+    const-string v6, ""
+
+    invoke-static {v5, v6}, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/nel;->OMn(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
+    if-eqz v4, :cond_3
+
+    .line 291
+    invoke-virtual {v3, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 293
+    :cond_3
+    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    const-string v7, "(\'"
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    const-string v6, "\')"
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_3
+
+    .line 296
+    :cond_4
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p0
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p0
+
+    const-string p2, "(\'\')"
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p1, p0}, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/nel;->OMn(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public DY()Ljava/lang/String;
+    .locals 1
+
+    .line 44
+    invoke-static {}, Lcom/bytedance/sdk/component/Si/DY/OMn/XX;->nel()Lcom/bytedance/sdk/component/Si/DY/OMn/XX;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bytedance/sdk/component/Si/DY/OMn/XX;->zAx()Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/URh;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/URh;->zAx()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public DY(Ljava/lang/String;)Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            ")",
+            "Ljava/util/List<",
+            "Lcom/bytedance/sdk/component/Si/DY/OMn/zAx/OMn;",
+            ">;"
+        }
+    .end annotation
+
+    .line 161
+    iget-object v0, p0, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/nel;->Ks:Lcom/bytedance/sdk/component/Si/DY/OMn/zAx/DY/OMn;
+
+    if-nez v0, :cond_0
+
+    .line 162
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+
+    return-object p1
+
+    .line 164
+    :cond_0
+    invoke-virtual {v0}, Lcom/bytedance/sdk/component/Si/DY/OMn/zAx/DY/OMn;->DY()I
+
+    move-result v0
+
+    invoke-virtual {p0, v0, p1}, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/nel;->OMn(ILjava/lang/String;)Ljava/util/List;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public DY(Ljava/util/List;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/bytedance/sdk/component/Si/DY/OMn/zAx/OMn;",
+            ">;)V"
+        }
+    .end annotation
+
+    if-eqz p1, :cond_2
+
+    .line 176
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_1
+
+    .line 179
+    :cond_0
+    new-instance v0, Ljava/util/LinkedList;
+
+    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
+
+    .line 180
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/bytedance/sdk/component/Si/DY/OMn/zAx/OMn;
+
+    .line 181
+    invoke-interface {v1}, Lcom/bytedance/sdk/component/Si/DY/OMn/zAx/OMn;->Ks()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 182
+    invoke-static {v1}, Lcom/bytedance/sdk/component/Si/DY/OMn/Ks/OMn;->Av(Lcom/bytedance/sdk/component/Si/DY/OMn/zAx/OMn;)V
+
+    goto :goto_0
+
+    .line 184
+    :cond_1
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0}, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/nel;->DY()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p1
+
+    const-string v1, " stats repo delete: "
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p1
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v1, "PADLT"
+
+    invoke-static {v1, p1}, Lcom/bytedance/sdk/component/Si/DY/OMn/Ks/Ks;->OMn(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 185
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string v1, "DELETE FROM "
+
+    invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/nel;->DY()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p1
+
+    const-string v1, " WHERE "
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p1
+
+    const/16 v1, 0x3e8
+
+    const/4 v2, 0x1
+
+    const-string v3, "id"
+
+    invoke-static {v3, v0, v1, v2}, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/nel;->OMn(Ljava/lang/String;Ljava/util/List;IZ)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 186
+    invoke-virtual {p0}, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/nel;->URh()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1, p1}, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/Ks;->OMn(Landroid/content/Context;Ljava/lang/String;)V
+
+    .line 187
+    invoke-virtual {p0, v0}, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/nel;->Ks(Ljava/util/List;)V
+
+    :cond_2
+    :goto_1
+    return-void
+.end method
+
+.method public Ks()B
+    .locals 1
+
+    const/4 v0, 0x2
+
+    return v0
+.end method
+
+.method public OMn()B
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public OMn(ILjava/lang/String;)Ljava/util/List;
+    .locals 11
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/lang/String;",
+            ")",
+            "Ljava/util/List<",
+            "Lcom/bytedance/sdk/component/Si/DY/OMn/zAx/OMn;",
+            ">;"
+        }
+    .end annotation
+
+    .line 86
+    invoke-virtual {p0}, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/nel;->URh()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {p1, v0}, Lcom/bytedance/sdk/component/Si/DY/OMn/DY/OMn;->OMn(ILandroid/content/Context;)J
+
+    move-result-wide v0
+
+    const-wide/16 v2, 0x0
+
+    cmp-long p1, v0, v2
+
+    if-lez p1, :cond_0
+
+    const-wide/16 v2, 0x64
+
+    cmp-long p1, v0, v2
+
+    if-lez p1, :cond_1
+
+    move-wide v0, v2
+
+    goto :goto_0
+
+    :cond_0
+    const-wide/16 v0, 0x1
+
+    .line 96
+    :cond_1
+    :goto_0
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p1
+
+    const-string p2, " DESC limit "
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    .line 97
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+
+    .line 98
+    iget-object p2, p0, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/nel;->OMn:Ljava/util/List;
+
+    invoke-interface {p2}, Ljava/util/List;->clear()V
+
+    .line 99
+    invoke-virtual {p0}, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/nel;->URh()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/nel;->DY()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 p2, 0x3
+
+    new-array v2, p2, [Ljava/lang/String;
+
+    const/4 p2, 0x0
+
+    const-string v8, "id"
+
+    aput-object v8, v2, p2
+
+    const/4 p2, 0x1
+
+    const-string v9, "value"
+
+    aput-object v9, v2, p2
+
+    const/4 v3, 0x2
+
+    const-string v10, "encrypt"
+
+    aput-object v10, v2, v3
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    invoke-static/range {v0 .. v7}, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/Ks;->OMn(Landroid/content/Context;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_7
+
+    .line 102
+    :catchall_0
+    :goto_1
+    :try_start_0
+    invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
+
+    move-result v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    if-eqz v0, :cond_5
+
+    .line 104
+    :try_start_1
+    invoke-interface {v1, v8}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v0
+
+    invoke-interface {v1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 105
+    invoke-interface {v1, v9}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v2
+
+    invoke-interface {v1, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 106
+    invoke-interface {v1, v10}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v3
+
+    invoke-interface {v1, v3}, Landroid/database/Cursor;->getInt(I)I
+
+    move-result v3
+
+    if-ne v3, p2, :cond_2
+
+    .line 108
+    invoke-static {}, Lcom/bytedance/sdk/component/Si/DY/OMn/XX;->nel()Lcom/bytedance/sdk/component/Si/DY/OMn/XX;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/bytedance/sdk/component/Si/DY/OMn/XX;->bKK()Lcom/bytedance/sdk/component/Si/DY/OMn/URh;
+
+    move-result-object v3
+
+    invoke-interface {v3, v2}, Lcom/bytedance/sdk/component/Si/DY/OMn/URh;->OMn(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 110
+    :cond_2
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    .line 111
+    iget-object v2, p0, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/nel;->OMn:Ljava/util/List;
+
+    invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    goto :goto_1
+
+    .line 114
+    :cond_3
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v3
+
+    const/16 v4, 0x64
+
+    if-le v3, v4, :cond_4
+
+    goto :goto_2
+
+    .line 118
+    :cond_4
+    new-instance v3, Lorg/json/JSONObject;
+
+    invoke-direct {v3, v2}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+
+    .line 120
+    new-instance v2, Lcom/bytedance/sdk/component/Si/DY/OMn/zAx/OMn/OMn;
+
+    invoke-direct {v2, v0, v3}, Lcom/bytedance/sdk/component/Si/DY/OMn/zAx/OMn/OMn;-><init>(Ljava/lang/String;Lorg/json/JSONObject;)V
+
+    .line 121
+    invoke-virtual {p0}, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/nel;->Ks()B
+
+    move-result v0
+
+    invoke-virtual {v2, v0}, Lcom/bytedance/sdk/component/Si/DY/OMn/zAx/OMn/OMn;->DY(B)V
+
+    .line 122
+    invoke-virtual {p0}, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/nel;->OMn()B
+
+    move-result v0
+
+    invoke-virtual {v2, v0}, Lcom/bytedance/sdk/component/Si/DY/OMn/zAx/OMn/OMn;->OMn(B)V
+
+    .line 123
+    invoke-interface {p1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    goto :goto_1
+
+    :cond_5
+    :goto_2
+    if-eqz v1, :cond_7
+
+    .line 131
+    :try_start_2
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    .line 132
+    iget-object p2, p0, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/nel;->OMn:Ljava/util/List;
+
+    invoke-interface {p2}, Ljava/util/List;->isEmpty()Z
+
+    move-result p2
+
+    if-nez p2, :cond_7
+
+    .line 133
+    iget-object p2, p0, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/nel;->OMn:Ljava/util/List;
+
+    invoke-virtual {p0, p2}, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/nel;->OMn(Ljava/util/List;)V
+
+    .line 134
+    iget-object p2, p0, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/nel;->OMn:Ljava/util/List;
+
+    invoke-interface {p2}, Ljava/util/List;->clear()V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
+
+    goto :goto_3
+
+    :catchall_1
+    move-exception v0
+
+    move-object p1, v0
+
+    if-eqz v1, :cond_6
+
+    .line 131
+    :try_start_3
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    .line 132
+    iget-object p2, p0, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/nel;->OMn:Ljava/util/List;
+
+    invoke-interface {p2}, Ljava/util/List;->isEmpty()Z
+
+    move-result p2
+
+    if-nez p2, :cond_6
+
+    .line 133
+    iget-object p2, p0, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/nel;->OMn:Ljava/util/List;
+
+    invoke-virtual {p0, p2}, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/nel;->OMn(Ljava/util/List;)V
+
+    .line 134
+    iget-object p2, p0, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/nel;->OMn:Ljava/util/List;
+
+    invoke-interface {p2}, Ljava/util/List;->clear()V
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
+
+    .line 138
+    :catch_0
+    :cond_6
+    throw p1
+
+    :catch_1
+    :cond_7
+    :goto_3
+    return-object p1
+.end method
+
+.method public OMn(IJ)V
+    .locals 0
+
+    .line 193
+    invoke-direct {p0, p1, p2, p3}, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/nel;->DY(IJ)V
+
+    return-void
+.end method
+
+.method protected OMn(Ljava/util/List;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 153
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0}, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/nel;->DY()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, " stats repo delete: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "PADLT"
+
+    invoke-static {v1, v0}, Lcom/bytedance/sdk/component/Si/DY/OMn/Ks/Ks;->OMn(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 154
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "DELETE FROM "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/nel;->DY()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, " WHERE "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const/16 v1, 0x3e8
+
+    const/4 v2, 0x1
+
+    const-string v3, "id"
+
+    invoke-static {v3, p1, v1, v2}, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/nel;->OMn(Ljava/lang/String;Ljava/util/List;IZ)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 155
+    invoke-virtual {p0}, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/nel;->URh()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1, v0}, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/Ks;->OMn(Landroid/content/Context;Ljava/lang/String;)V
+
+    .line 156
+    sget-object v0, Lcom/bytedance/sdk/component/Si/DY/OMn/DY/zAx;->zAx:Lcom/bytedance/sdk/component/Si/DY/OMn/DY/OMn/OMn;
+
+    invoke-virtual {v0}, Lcom/bytedance/sdk/component/Si/DY/OMn/DY/OMn/OMn;->IhO()Ljava/util/concurrent/atomic/AtomicLong;
+
+    move-result-object v0
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    invoke-static {v0, v1}, Lcom/bytedance/sdk/component/Si/DY/OMn/Ks/DY;->OMn(Ljava/util/concurrent/atomic/AtomicLong;I)V
+
+    .line 157
+    invoke-virtual {p0, p1}, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/nel;->Ks(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public OMn(I)Z
+    .locals 2
+
+    .line 217
+    iget-object p1, p0, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/nel;->Ks:Lcom/bytedance/sdk/component/Si/DY/OMn/zAx/DY/OMn;
+
+    const/4 v0, 0x0
+
+    if-nez p1, :cond_0
+
+    return v0
+
+    .line 220
+    :cond_0
+    invoke-virtual {p0}, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/nel;->zAx()I
+
+    move-result p1
+
+    iget-object v1, p0, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/nel;->Ks:Lcom/bytedance/sdk/component/Si/DY/OMn/zAx/DY/OMn;
+
+    invoke-virtual {v1}, Lcom/bytedance/sdk/component/Si/DY/OMn/zAx/DY/OMn;->OMn()I
+
+    move-result v1
+
+    if-lt p1, v1, :cond_1
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public zAx()I
+    .locals 9
+
+    const/4 v0, 0x0
+
+    .line 60
+    :try_start_0
+    invoke-virtual {p0}, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/nel;->URh()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/OMn/nel;->DY()Ljava/lang/String;
+
+    move-result-object v2
+
+    const/4 v3, 0x1
+
+    new-array v3, v3, [Ljava/lang/String;
+
+    const-string v4, "count(1)"
+
+    aput-object v4, v3, v0
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    invoke-static/range {v1 .. v8}, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/OMn/Ks;->OMn(Landroid/content/Context;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v1, :cond_0
+
+    .line 63
+    :try_start_1
+    invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
+
+    .line 64
+    invoke-interface {v1, v0}, Landroid/database/Cursor;->getInt(I)I
+
+    move-result v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :cond_0
+    if-eqz v1, :cond_1
+
+    .line 71
+    :goto_0
+    :try_start_2
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+
+    goto :goto_1
+
+    :catchall_0
+    const/4 v1, 0x0
+
+    :catchall_1
+    if-eqz v1, :cond_1
+
+    goto :goto_0
+
+    :catch_0
+    :cond_1
+    :goto_1
+    return v0
+.end method

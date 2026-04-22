@@ -1,0 +1,271 @@
+.class final Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink$FrameRendererImpl;
+.super Ljava/lang/Object;
+.source "DefaultVideoSink.java"
+
+# interfaces
+.implements Lio/bidmachine/media3/exoplayer/video/VideoFrameRenderControl$FrameRenderer;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x12
+    name = "FrameRendererImpl"
+.end annotation
+
+
+# instance fields
+.field private outputFormat:Lio/bidmachine/media3/common/Format;
+
+.field final synthetic this$0:Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;
+
+
+# direct methods
+.method private constructor <init>(Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;)V
+    .locals 0
+
+    .line 270
+    iput-object p1, p0, Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink$FrameRendererImpl;->this$0:Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method synthetic constructor <init>(Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink$1;)V
+    .locals 0
+
+    .line 270
+    invoke-direct {p0, p1}, Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink$FrameRendererImpl;-><init>(Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public dropFrame()V
+    .locals 2
+
+    .line 304
+    iget-object v0, p0, Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink$FrameRendererImpl;->this$0:Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;
+
+    invoke-static {v0}, Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;->access$100(Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;)Ljava/util/concurrent/Executor;
+
+    move-result-object v0
+
+    new-instance v1, Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink$FrameRendererImpl$$ExternalSyntheticLambda2;
+
+    invoke-direct {v1, p0}, Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink$FrameRendererImpl$$ExternalSyntheticLambda2;-><init>(Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink$FrameRendererImpl;)V
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    .line 305
+    iget-object v0, p0, Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink$FrameRendererImpl;->this$0:Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;
+
+    invoke-static {v0}, Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;->access$500(Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;)Ljava/util/Queue;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Queue;->remove()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lio/bidmachine/media3/exoplayer/video/VideoSink$VideoFrameHandler;
+
+    invoke-interface {v0}, Lio/bidmachine/media3/exoplayer/video/VideoSink$VideoFrameHandler;->skip()V
+
+    return-void
+.end method
+
+.method synthetic lambda$dropFrame$2$io-bidmachine-media3-exoplayer-video-DefaultVideoSink$FrameRendererImpl()V
+    .locals 2
+
+    .line 304
+    iget-object v0, p0, Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink$FrameRendererImpl;->this$0:Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;
+
+    invoke-static {v0}, Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;->access$600(Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;)Lio/bidmachine/media3/exoplayer/video/VideoSink$Listener;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink$FrameRendererImpl;->this$0:Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;
+
+    invoke-interface {v0, v1}, Lio/bidmachine/media3/exoplayer/video/VideoSink$Listener;->onFrameDropped(Lio/bidmachine/media3/exoplayer/video/VideoSink;)V
+
+    return-void
+.end method
+
+.method synthetic lambda$onVideoSizeChanged$0$io-bidmachine-media3-exoplayer-video-DefaultVideoSink$FrameRendererImpl(Lio/bidmachine/media3/common/VideoSize;)V
+    .locals 2
+
+    .line 282
+    iget-object v0, p0, Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink$FrameRendererImpl;->this$0:Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;
+
+    invoke-static {v0}, Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;->access$600(Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;)Lio/bidmachine/media3/exoplayer/video/VideoSink$Listener;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink$FrameRendererImpl;->this$0:Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;
+
+    invoke-interface {v0, v1, p1}, Lio/bidmachine/media3/exoplayer/video/VideoSink$Listener;->onVideoSizeChanged(Lio/bidmachine/media3/exoplayer/video/VideoSink;Lio/bidmachine/media3/common/VideoSize;)V
+
+    return-void
+.end method
+
+.method synthetic lambda$renderFrame$1$io-bidmachine-media3-exoplayer-video-DefaultVideoSink$FrameRendererImpl()V
+    .locals 2
+
+    .line 289
+    iget-object v0, p0, Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink$FrameRendererImpl;->this$0:Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;
+
+    invoke-static {v0}, Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;->access$600(Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;)Lio/bidmachine/media3/exoplayer/video/VideoSink$Listener;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink$FrameRendererImpl;->this$0:Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;
+
+    invoke-interface {v0, v1}, Lio/bidmachine/media3/exoplayer/video/VideoSink$Listener;->onFirstFrameRendered(Lio/bidmachine/media3/exoplayer/video/VideoSink;)V
+
+    return-void
+.end method
+
+.method public onVideoSizeChanged(Lio/bidmachine/media3/common/VideoSize;)V
+    .locals 2
+
+    .line 276
+    new-instance v0, Lio/bidmachine/media3/common/Format$Builder;
+
+    invoke-direct {v0}, Lio/bidmachine/media3/common/Format$Builder;-><init>()V
+
+    iget v1, p1, Lio/bidmachine/media3/common/VideoSize;->width:I
+
+    .line 278
+    invoke-virtual {v0, v1}, Lio/bidmachine/media3/common/Format$Builder;->setWidth(I)Lio/bidmachine/media3/common/Format$Builder;
+
+    move-result-object v0
+
+    iget v1, p1, Lio/bidmachine/media3/common/VideoSize;->height:I
+
+    .line 279
+    invoke-virtual {v0, v1}, Lio/bidmachine/media3/common/Format$Builder;->setHeight(I)Lio/bidmachine/media3/common/Format$Builder;
+
+    move-result-object v0
+
+    const-string v1, "video/raw"
+
+    .line 280
+    invoke-virtual {v0, v1}, Lio/bidmachine/media3/common/Format$Builder;->setSampleMimeType(Ljava/lang/String;)Lio/bidmachine/media3/common/Format$Builder;
+
+    move-result-object v0
+
+    .line 281
+    invoke-virtual {v0}, Lio/bidmachine/media3/common/Format$Builder;->build()Lio/bidmachine/media3/common/Format;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink$FrameRendererImpl;->outputFormat:Lio/bidmachine/media3/common/Format;
+
+    .line 282
+    iget-object v0, p0, Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink$FrameRendererImpl;->this$0:Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;
+
+    invoke-static {v0}, Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;->access$100(Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;)Ljava/util/concurrent/Executor;
+
+    move-result-object v0
+
+    new-instance v1, Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink$FrameRendererImpl$$ExternalSyntheticLambda0;
+
+    invoke-direct {v1, p0, p1}, Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink$FrameRendererImpl$$ExternalSyntheticLambda0;-><init>(Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink$FrameRendererImpl;Lio/bidmachine/media3/common/VideoSize;)V
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method public renderFrame(JJZ)V
+    .locals 7
+
+    if-eqz p5, :cond_0
+
+    .line 288
+    iget-object p5, p0, Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink$FrameRendererImpl;->this$0:Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;
+
+    invoke-static {p5}, Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;->access$200(Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;)Landroid/view/Surface;
+
+    move-result-object p5
+
+    if-eqz p5, :cond_0
+
+    .line 289
+    iget-object p5, p0, Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink$FrameRendererImpl;->this$0:Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;
+
+    invoke-static {p5}, Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;->access$100(Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;)Ljava/util/concurrent/Executor;
+
+    move-result-object p5
+
+    new-instance v0, Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink$FrameRendererImpl$$ExternalSyntheticLambda1;
+
+    invoke-direct {v0, p0}, Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink$FrameRendererImpl$$ExternalSyntheticLambda1;-><init>(Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink$FrameRendererImpl;)V
+
+    invoke-interface {p5, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    .line 293
+    :cond_0
+    iget-object p5, p0, Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink$FrameRendererImpl;->outputFormat:Lio/bidmachine/media3/common/Format;
+
+    if-nez p5, :cond_1
+
+    new-instance p5, Lio/bidmachine/media3/common/Format$Builder;
+
+    invoke-direct {p5}, Lio/bidmachine/media3/common/Format$Builder;-><init>()V
+
+    invoke-virtual {p5}, Lio/bidmachine/media3/common/Format$Builder;->build()Lio/bidmachine/media3/common/Format;
+
+    move-result-object p5
+
+    :cond_1
+    move-object v5, p5
+
+    .line 294
+    iget-object p5, p0, Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink$FrameRendererImpl;->this$0:Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;
+
+    invoke-static {p5}, Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;->access$400(Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;)Lio/bidmachine/media3/exoplayer/video/VideoFrameMetadataListener;
+
+    move-result-object v0
+
+    iget-object p5, p0, Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink$FrameRendererImpl;->this$0:Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;
+
+    .line 296
+    invoke-static {p5}, Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;->access$300(Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;)Lio/bidmachine/media3/common/util/Clock;
+
+    move-result-object p5
+
+    invoke-interface {p5}, Lio/bidmachine/media3/common/util/Clock;->nanoTime()J
+
+    move-result-wide v3
+
+    const/4 v6, 0x0
+
+    move-wide v1, p3
+
+    .line 294
+    invoke-interface/range {v0 .. v6}, Lio/bidmachine/media3/exoplayer/video/VideoFrameMetadataListener;->onVideoFrameAboutToBeRendered(JJLio/bidmachine/media3/common/Format;Landroid/media/MediaFormat;)V
+
+    .line 299
+    iget-object p3, p0, Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink$FrameRendererImpl;->this$0:Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;
+
+    invoke-static {p3}, Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;->access$500(Lio/bidmachine/media3/exoplayer/video/DefaultVideoSink;)Ljava/util/Queue;
+
+    move-result-object p3
+
+    invoke-interface {p3}, Ljava/util/Queue;->remove()Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, Lio/bidmachine/media3/exoplayer/video/VideoSink$VideoFrameHandler;
+
+    invoke-interface {p3, p1, p2}, Lio/bidmachine/media3/exoplayer/video/VideoSink$VideoFrameHandler;->render(J)V
+
+    return-void
+.end method

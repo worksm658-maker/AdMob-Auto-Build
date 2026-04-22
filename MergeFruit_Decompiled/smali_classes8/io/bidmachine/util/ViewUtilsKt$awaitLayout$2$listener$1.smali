@@ -1,0 +1,121 @@
+.class public final Lio/bidmachine/util/ViewUtilsKt$awaitLayout$2$listener$1;
+.super Ljava/lang/Object;
+.source "ViewUtils.kt"
+
+# interfaces
+.implements Landroid/view/View$OnLayoutChangeListener;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lio/bidmachine/util/ViewUtilsKt;->awaitLayout(Landroid/view/View;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = null
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u001f\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0008*\u0001\u0000\u0008\n\u0018\u00002\u00020\u0001JP\u0010\u0002\u001a\u00020\u00032\u0006\u0010\u0004\u001a\u00020\u00052\u0006\u0010\u0006\u001a\u00020\u00072\u0006\u0010\u0008\u001a\u00020\u00072\u0006\u0010\t\u001a\u00020\u00072\u0006\u0010\n\u001a\u00020\u00072\u0006\u0010\u000b\u001a\u00020\u00072\u0006\u0010\u000c\u001a\u00020\u00072\u0006\u0010\r\u001a\u00020\u00072\u0006\u0010\u000e\u001a\u00020\u0007H\u0016\u00a8\u0006\u000f"
+    }
+    d2 = {
+        "io/bidmachine/util/ViewUtilsKt$awaitLayout$2$listener$1",
+        "Landroid/view/View$OnLayoutChangeListener;",
+        "onLayoutChange",
+        "",
+        "view",
+        "Landroid/view/View;",
+        "left",
+        "",
+        "top",
+        "right",
+        "bottom",
+        "oldLeft",
+        "oldTop",
+        "oldRight",
+        "oldBottom",
+        "bidmachine-android-sdk_ca_3_4_0"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x7,
+        0x1
+    }
+    xi = 0x30
+.end annotation
+
+
+# instance fields
+.field final synthetic $continuation:Lkotlinx/coroutines/CancellableContinuation;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lkotlinx/coroutines/CancellableContinuation<",
+            "Landroid/view/View;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field final synthetic $this_awaitLayout:Landroid/view/View;
+
+
+# direct methods
+.method constructor <init>(Landroid/view/View;Lkotlinx/coroutines/CancellableContinuation;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/view/View;",
+            "Lkotlinx/coroutines/CancellableContinuation<",
+            "-",
+            "Landroid/view/View;",
+            ">;)V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lio/bidmachine/util/ViewUtilsKt$awaitLayout$2$listener$1;->$this_awaitLayout:Landroid/view/View;
+
+    iput-object p2, p0, Lio/bidmachine/util/ViewUtilsKt$awaitLayout$2$listener$1;->$continuation:Lkotlinx/coroutines/CancellableContinuation;
+
+    .line 262
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onLayoutChange(Landroid/view/View;IIIIIIII)V
+    .locals 0
+
+    const-string p2, "view"
+
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 274
+    iget-object p2, p0, Lio/bidmachine/util/ViewUtilsKt$awaitLayout$2$listener$1;->$this_awaitLayout:Landroid/view/View;
+
+    move-object p3, p0
+
+    check-cast p3, Landroid/view/View$OnLayoutChangeListener;
+
+    invoke-virtual {p2, p3}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
+
+    .line 275
+    iget-object p2, p0, Lio/bidmachine/util/ViewUtilsKt$awaitLayout$2$listener$1;->$continuation:Lkotlinx/coroutines/CancellableContinuation;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    sget-object p3, Lkotlin/Result;->Companion:Lkotlin/Result$Companion;
+
+    invoke-static {p1}, Lkotlin/Result;->constructor-impl(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-interface {p2, p1}, Lkotlin/coroutines/Continuation;->resumeWith(Ljava/lang/Object;)V
+
+    return-void
+.end method

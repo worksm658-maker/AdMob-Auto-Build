@@ -1,0 +1,36 @@
+.class public final synthetic Lcom/kwai/network/a/gs$$ExternalSyntheticLambda2;
+.super Ljava/lang/Object;
+.source "D8$$SyntheticClass"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic f$0:Lcom/kwai/network/a/gs;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/kwai/network/a/gs;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/kwai/network/a/gs$$ExternalSyntheticLambda2;->f$0:Lcom/kwai/network/a/gs;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, Lcom/kwai/network/a/gs$$ExternalSyntheticLambda2;->f$0:Lcom/kwai/network/a/gs;
+
+    invoke-static {v0}, Lcom/kwai/network/a/gs;->$r8$lambda$ZebU8IigEMbfymy47qlhOyWX1dQ(Lcom/kwai/network/a/gs;)V
+
+    return-void
+.end method

@@ -1,0 +1,78 @@
+.class public interface abstract Lcom/google/android/gms/internal/ads/zzduv;
+.super Ljava/lang/Object;
+.source "r8-map-id-7dfb0eae3f6702c581b77ce061402397ffc51803b9460e670aef0bc885b443a3"
+
+# interfaces
+.implements Lcom/google/android/gms/internal/ads/zzdbd;
+
+
+# virtual methods
+.method public abstract zza()Lcom/google/android/gms/internal/ads/zzduw;
+.end method
+
+.method public abstract zzb(Lcom/google/android/gms/internal/ads/zzfgj;)Lcom/google/android/gms/internal/ads/zzduv;
+    .param p1    # Lcom/google/android/gms/internal/ads/zzfgj;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+.end method
+
+.method public abstract zzc(Lcom/google/android/gms/internal/ads/zzfhf;)Lcom/google/android/gms/internal/ads/zzduv;
+    .param p1    # Lcom/google/android/gms/internal/ads/zzfhf;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+.end method
+
+.method public abstract zzd(Lcom/google/android/gms/internal/ads/zzdbg;)Lcom/google/android/gms/internal/ads/zzduv;
+.end method
+
+.method public abstract zze(Lcom/google/android/gms/internal/ads/zzdhw;)Lcom/google/android/gms/internal/ads/zzduv;
+.end method
+
+.method public bridge synthetic zzh()Ljava/lang/Object;
+    .locals 1
+
+    .line 1
+    invoke-interface {p0}, Lcom/google/android/gms/internal/ads/zzduv;->zza()Lcom/google/android/gms/internal/ads/zzduw;
+
+    .line 2
+    .line 3
+    .line 4
+    move-result-object v0
+
+    .line 5
+    return-object v0
+.end method
+
+.method public bridge synthetic zzi(Lcom/google/android/gms/internal/ads/zzfgj;)Lcom/google/android/gms/internal/ads/zzdbd;
+    .locals 0
+    .param p1    # Lcom/google/android/gms/internal/ads/zzfgj;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-interface {p0, p1}, Lcom/google/android/gms/internal/ads/zzduv;->zzb(Lcom/google/android/gms/internal/ads/zzfgj;)Lcom/google/android/gms/internal/ads/zzduv;
+
+    .line 2
+    .line 3
+    .line 4
+    return-object p0
+.end method
+
+.method public bridge synthetic zzj(Lcom/google/android/gms/internal/ads/zzfhf;)Lcom/google/android/gms/internal/ads/zzdbd;
+    .locals 0
+    .param p1    # Lcom/google/android/gms/internal/ads/zzfhf;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-interface {p0, p1}, Lcom/google/android/gms/internal/ads/zzduv;->zzc(Lcom/google/android/gms/internal/ads/zzfhf;)Lcom/google/android/gms/internal/ads/zzduv;
+
+    .line 2
+    .line 3
+    .line 4
+    return-object p0
+.end method

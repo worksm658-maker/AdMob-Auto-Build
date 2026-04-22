@@ -1,0 +1,42 @@
+.class public final synthetic Lcom/verve/atom/sdk/database/DatabaseManager$1$$ExternalSyntheticLambda1;
+.super Ljava/lang/Object;
+.source "D8$$SyntheticClass"
+
+# interfaces
+.implements Lcom/verve/atom/sdk/database/DatabaseManager$TransactionalOperation;
+
+
+# instance fields
+.field public final synthetic f$0:Lcom/verve/atom/sdk/database/DatabaseManager$1;
+
+.field public final synthetic f$1:Lcom/verve/atom/sdk/models/FlushTable;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/verve/atom/sdk/database/DatabaseManager$1;Lcom/verve/atom/sdk/models/FlushTable;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/verve/atom/sdk/database/DatabaseManager$1$$ExternalSyntheticLambda1;->f$0:Lcom/verve/atom/sdk/database/DatabaseManager$1;
+
+    iput-object p2, p0, Lcom/verve/atom/sdk/database/DatabaseManager$1$$ExternalSyntheticLambda1;->f$1:Lcom/verve/atom/sdk/models/FlushTable;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final execute()V
+    .locals 2
+
+    .line 0
+    iget-object v0, p0, Lcom/verve/atom/sdk/database/DatabaseManager$1$$ExternalSyntheticLambda1;->f$0:Lcom/verve/atom/sdk/database/DatabaseManager$1;
+
+    iget-object v1, p0, Lcom/verve/atom/sdk/database/DatabaseManager$1$$ExternalSyntheticLambda1;->f$1:Lcom/verve/atom/sdk/models/FlushTable;
+
+    invoke-virtual {v0, v1}, Lcom/verve/atom/sdk/database/DatabaseManager$1;->lambda$run$0$com-verve-atom-sdk-database-DatabaseManager$1(Lcom/verve/atom/sdk/models/FlushTable;)V
+
+    return-void
+.end method

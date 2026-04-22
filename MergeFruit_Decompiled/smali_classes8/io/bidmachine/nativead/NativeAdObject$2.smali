@@ -1,0 +1,80 @@
+.class Lio/bidmachine/nativead/NativeAdObject$2;
+.super Ljava/lang/Object;
+.source "NativeAdObject.java"
+
+# interfaces
+.implements Landroid/view/View$OnAttachStateChangeListener;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lio/bidmachine/nativead/NativeAdObject;->showProgressDialog(Landroid/app/Activity;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic this$0:Lio/bidmachine/nativead/NativeAdObject;
+
+
+# direct methods
+.method constructor <init>(Lio/bidmachine/nativead/NativeAdObject;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
+
+    .line 580
+    iput-object p1, p0, Lio/bidmachine/nativead/NativeAdObject$2;->this$0:Lio/bidmachine/nativead/NativeAdObject;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onViewAttachedToWindow(Landroid/view/View;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
+
+    return-void
+.end method
+
+.method public onViewDetachedFromWindow(Landroid/view/View;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
+
+    .line 588
+    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+
+    .line 589
+    iget-object p1, p0, Lio/bidmachine/nativead/NativeAdObject$2;->this$0:Lio/bidmachine/nativead/NativeAdObject;
+
+    invoke-static {p1}, Lio/bidmachine/nativead/NativeAdObject;->access$100(Lio/bidmachine/nativead/NativeAdObject;)V
+
+    return-void
+.end method

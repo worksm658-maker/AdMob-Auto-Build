@@ -1,0 +1,283 @@
+.class final Lsg/bigo/ads/ad/interstitial/e/c$1;
+.super Lsg/bigo/ads/api/d;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lsg/bigo/ads/ad/interstitial/e/c;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lsg/bigo/ads/ad/interstitial/e/c;
+
+
+# direct methods
+.method constructor <init>(Lsg/bigo/ads/ad/interstitial/e/c;)V
+    .locals 0
+
+    iput-object p1, p0, Lsg/bigo/ads/ad/interstitial/e/c$1;->a:Lsg/bigo/ads/ad/interstitial/e/c;
+
+    invoke-direct {p0}, Lsg/bigo/ads/api/d;-><init>()V
+
+    return-void
+.end method
+
+.method private a(Lsg/bigo/ads/api/NativeAd;Ljava/util/List;)I
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lsg/bigo/ads/api/NativeAd;",
+            "Ljava/util/List<",
+            "Lsg/bigo/ads/api/NativeAd;",
+            ">;)I"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lsg/bigo/ads/ad/interstitial/e/c$1;->a:Lsg/bigo/ads/ad/interstitial/e/c;
+
+    iget-boolean v0, v0, Lsg/bigo/ads/ad/interstitial/e/c;->p:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lsg/bigo/ads/ad/interstitial/e/c$1;->a:Lsg/bigo/ads/ad/interstitial/e/c;
+
+    iget-object v0, v0, Lsg/bigo/ads/ad/interstitial/e/c;->b:Lsg/bigo/ads/ad/interstitial/e/a/a;
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lsg/bigo/ads/ad/interstitial/e/c$1;->a:Lsg/bigo/ads/ad/interstitial/e/c;
+
+    iget-object v0, v0, Lsg/bigo/ads/ad/interstitial/e/c;->c:Lsg/bigo/ads/ad/interstitial/e/a/c;
+
+    :goto_0
+    invoke-static {v0}, Lsg/bigo/ads/ad/interstitial/e/a/b;->a(Lsg/bigo/ads/ad/interstitial/e/a/b;)I
+
+    move-result v0
+
+    invoke-interface {p2, p1}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
+
+    move-result p1
+
+    if-nez v0, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    div-int/2addr p1, v0
+
+    return p1
+.end method
+
+
+# virtual methods
+.method public final a(Lsg/bigo/ads/api/NativeAd;)V
+    .locals 5
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x3
+
+    const-string v2, "IconAdsMgr"
+
+    const-string v3, "ad impression."
+
+    invoke-static {v0, v1, v2, v3}, Lsg/bigo/ads/common/t/a;->a(IILjava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lsg/bigo/ads/ad/interstitial/e/c$1;->a:Lsg/bigo/ads/ad/interstitial/e/c;
+
+    iget-boolean v0, v0, Lsg/bigo/ads/ad/interstitial/e/c;->p:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lsg/bigo/ads/ad/interstitial/e/c$1;->a:Lsg/bigo/ads/ad/interstitial/e/c;
+
+    iget-object v0, v0, Lsg/bigo/ads/ad/interstitial/e/c;->b:Lsg/bigo/ads/ad/interstitial/e/a/a;
+
+    iget-object v1, p0, Lsg/bigo/ads/ad/interstitial/e/c$1;->a:Lsg/bigo/ads/ad/interstitial/e/c;
+
+    iget-object v1, v1, Lsg/bigo/ads/ad/interstitial/e/c;->u:Ljava/util/List;
+
+    iget-object v2, p0, Lsg/bigo/ads/ad/interstitial/e/c$1;->a:Lsg/bigo/ads/ad/interstitial/e/c;
+
+    iget-object v2, v2, Lsg/bigo/ads/ad/interstitial/e/c;->q:Ljava/util/List;
+
+    iget-object v3, p0, Lsg/bigo/ads/ad/interstitial/e/c$1;->a:Lsg/bigo/ads/ad/interstitial/e/c;
+
+    iget-object v3, v3, Lsg/bigo/ads/ad/interstitial/e/c;->s:Ljava/util/Map;
+
+    iget-object v4, p0, Lsg/bigo/ads/ad/interstitial/e/c$1;->a:Lsg/bigo/ads/ad/interstitial/e/c;
+
+    iget-object v4, v4, Lsg/bigo/ads/ad/interstitial/e/c;->q:Ljava/util/List;
+
+    :goto_0
+    invoke-direct {p0, p1, v4}, Lsg/bigo/ads/ad/interstitial/e/c$1;->a(Lsg/bigo/ads/api/NativeAd;Ljava/util/List;)I
+
+    move-result p1
+
+    invoke-static {v0, v1, v2, v3, p1}, Lsg/bigo/ads/ad/interstitial/e/c;->a(Lsg/bigo/ads/ad/interstitial/e/a/b;Ljava/util/List;Ljava/util/List;Ljava/util/Map;I)V
+
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lsg/bigo/ads/ad/interstitial/e/c$1;->a:Lsg/bigo/ads/ad/interstitial/e/c;
+
+    iget-object v0, v0, Lsg/bigo/ads/ad/interstitial/e/c;->c:Lsg/bigo/ads/ad/interstitial/e/a/c;
+
+    iget-object v1, p0, Lsg/bigo/ads/ad/interstitial/e/c$1;->a:Lsg/bigo/ads/ad/interstitial/e/c;
+
+    iget-object v1, v1, Lsg/bigo/ads/ad/interstitial/e/c;->v:Ljava/util/List;
+
+    iget-object v2, p0, Lsg/bigo/ads/ad/interstitial/e/c$1;->a:Lsg/bigo/ads/ad/interstitial/e/c;
+
+    iget-object v2, v2, Lsg/bigo/ads/ad/interstitial/e/c;->r:Ljava/util/List;
+
+    iget-object v3, p0, Lsg/bigo/ads/ad/interstitial/e/c$1;->a:Lsg/bigo/ads/ad/interstitial/e/c;
+
+    iget-object v3, v3, Lsg/bigo/ads/ad/interstitial/e/c;->t:Ljava/util/Map;
+
+    iget-object v4, p0, Lsg/bigo/ads/ad/interstitial/e/c$1;->a:Lsg/bigo/ads/ad/interstitial/e/c;
+
+    iget-object v4, v4, Lsg/bigo/ads/ad/interstitial/e/c;->r:Ljava/util/List;
+
+    goto :goto_0
+.end method
+
+.method public final a(Lsg/bigo/ads/api/NativeAd;Lsg/bigo/ads/api/AdError;)V
+    .locals 2
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string v0, "ad error, code="
+
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p2}, Lsg/bigo/ads/api/AdError;->getCode()I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object p1
+
+    const-string v0, ", message="
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p1
+
+    invoke-virtual {p2}, Lsg/bigo/ads/api/AdError;->getMessage()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    const/4 v0, 0x3
+
+    const-string v1, "IconAdsMgr"
+
+    invoke-static {p2, v0, v1, p1}, Lsg/bigo/ads/common/t/a;->a(IILjava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final b(Lsg/bigo/ads/api/NativeAd;)V
+    .locals 3
+
+    const/4 p1, 0x0
+
+    const/4 v0, 0x3
+
+    const-string v1, "IconAdsMgr"
+
+    const-string v2, "ad click."
+
+    invoke-static {p1, v0, v1, v2}, Lsg/bigo/ads/common/t/a;->a(IILjava/lang/String;Ljava/lang/String;)V
+
+    iget-object p1, p0, Lsg/bigo/ads/ad/interstitial/e/c$1;->a:Lsg/bigo/ads/ad/interstitial/e/c;
+
+    iget-object p1, p1, Lsg/bigo/ads/ad/interstitial/e/c;->l:Lsg/bigo/ads/common/utils/n;
+
+    const/4 v0, 0x0
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, Lsg/bigo/ads/ad/interstitial/e/c$1;->a:Lsg/bigo/ads/ad/interstitial/e/c;
+
+    iget-object p1, p1, Lsg/bigo/ads/ad/interstitial/e/c;->l:Lsg/bigo/ads/common/utils/n;
+
+    invoke-virtual {p1}, Lsg/bigo/ads/common/utils/n;->b()V
+
+    iget-object p1, p0, Lsg/bigo/ads/ad/interstitial/e/c$1;->a:Lsg/bigo/ads/ad/interstitial/e/c;
+
+    iput-object v0, p1, Lsg/bigo/ads/ad/interstitial/e/c;->l:Lsg/bigo/ads/common/utils/n;
+
+    :cond_0
+    iget-object p1, p0, Lsg/bigo/ads/ad/interstitial/e/c$1;->a:Lsg/bigo/ads/ad/interstitial/e/c;
+
+    iget-object p1, p1, Lsg/bigo/ads/ad/interstitial/e/c;->m:Lsg/bigo/ads/common/utils/n;
+
+    if-eqz p1, :cond_1
+
+    iget-object p1, p0, Lsg/bigo/ads/ad/interstitial/e/c$1;->a:Lsg/bigo/ads/ad/interstitial/e/c;
+
+    iget-object p1, p1, Lsg/bigo/ads/ad/interstitial/e/c;->m:Lsg/bigo/ads/common/utils/n;
+
+    invoke-virtual {p1}, Lsg/bigo/ads/common/utils/n;->b()V
+
+    iget-object p1, p0, Lsg/bigo/ads/ad/interstitial/e/c$1;->a:Lsg/bigo/ads/ad/interstitial/e/c;
+
+    iput-object v0, p1, Lsg/bigo/ads/ad/interstitial/e/c;->m:Lsg/bigo/ads/common/utils/n;
+
+    :cond_1
+    return-void
+.end method
+
+.method public final c(Lsg/bigo/ads/api/NativeAd;)V
+    .locals 3
+
+    const/4 p1, 0x0
+
+    const/4 v0, 0x3
+
+    const-string v1, "IconAdsMgr"
+
+    const-string v2, "ad click."
+
+    invoke-static {p1, v0, v1, v2}, Lsg/bigo/ads/common/t/a;->a(IILjava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final d(Lsg/bigo/ads/api/NativeAd;)V
+    .locals 3
+
+    const/4 p1, 0x0
+
+    const/4 v0, 0x3
+
+    const-string v1, "IconAdsMgr"
+
+    const-string v2, "ad click."
+
+    invoke-static {p1, v0, v1, v2}, Lsg/bigo/ads/common/t/a;->a(IILjava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method

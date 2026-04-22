@@ -1,0 +1,28 @@
+.class public abstract Lcom/kuaishou/security/kste/logic/model/StartupConfigEntry$BitcodeConfigBean;
+.super Ljava/lang/Object;
+.source ""
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static builder()Lcom/kuaishou/security/kste/logic/model/StartupConfigEntry$BitcodeConfigBean$Builder;
+    .locals 1
+
+    new-instance v0, Lcom/kuaishou/security/kste/logic/model/AutoValue_StartupConfigEntry_BitcodeConfigBean$Builder;
+
+    invoke-direct {v0}, Lcom/kuaishou/security/kste/logic/model/AutoValue_StartupConfigEntry_BitcodeConfigBean$Builder;-><init>()V
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public abstract needUpdate()I
+.end method

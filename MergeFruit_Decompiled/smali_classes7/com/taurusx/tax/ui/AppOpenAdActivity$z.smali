@@ -1,0 +1,185 @@
+.class public Lcom/taurusx/tax/ui/AppOpenAdActivity$z;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnLayoutChangeListener;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/taurusx/tax/ui/AppOpenAdActivity;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1
+    name = null
+.end annotation
+
+
+# instance fields
+.field public final synthetic z:Lcom/taurusx/tax/ui/AppOpenAdActivity;
+
+
+# direct methods
+.method public constructor <init>(Lcom/taurusx/tax/ui/AppOpenAdActivity;)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lcom/taurusx/tax/ui/AppOpenAdActivity$z;->z:Lcom/taurusx/tax/ui/AppOpenAdActivity;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onLayoutChange(Landroid/view/View;IIIIIIII)V
+    .locals 0
+
+    if-ne p2, p6, :cond_1
+
+    if-ne p3, p7, :cond_1
+
+    if-ne p4, p8, :cond_1
+
+    if-eq p5, p9, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+
+    .line 1
+    :cond_1
+    :goto_0
+    iget-object p1, p0, Lcom/taurusx/tax/ui/AppOpenAdActivity$z;->z:Lcom/taurusx/tax/ui/AppOpenAdActivity;
+
+    invoke-static {p1}, Lcom/taurusx/tax/ui/AppOpenAdActivity;->z(Lcom/taurusx/tax/ui/AppOpenAdActivity;)F
+
+    move-result p2
+
+    const/4 p3, 0x0
+
+    cmpl-float p2, p2, p3
+
+    if-lez p2, :cond_2
+
+    iget-object p2, p0, Lcom/taurusx/tax/ui/AppOpenAdActivity$z;->z:Lcom/taurusx/tax/ui/AppOpenAdActivity;
+
+    invoke-static {p2}, Lcom/taurusx/tax/ui/AppOpenAdActivity;->z(Lcom/taurusx/tax/ui/AppOpenAdActivity;)F
+
+    move-result p2
+
+    goto :goto_1
+
+    :cond_2
+    const/high16 p2, 0x3f800000    # 1.0f
+
+    :goto_1
+    invoke-static {p1, p2}, Lcom/taurusx/tax/ui/AppOpenAdActivity;->z(Lcom/taurusx/tax/ui/AppOpenAdActivity;F)F
+
+    .line 2
+    new-instance p1, Ljava/math/BigDecimal;
+
+    iget-object p2, p0, Lcom/taurusx/tax/ui/AppOpenAdActivity$z;->z:Lcom/taurusx/tax/ui/AppOpenAdActivity;
+
+    invoke-static {p2}, Lcom/taurusx/tax/ui/AppOpenAdActivity;->z(Lcom/taurusx/tax/ui/AppOpenAdActivity;)F
+
+    move-result p2
+
+    invoke-static {p2}, Ljava/lang/String;->valueOf(F)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/math/BigDecimal;-><init>(Ljava/lang/String;)V
+
+    .line 4
+    new-instance p2, Ljava/math/BigDecimal;
+
+    iget-object p3, p0, Lcom/taurusx/tax/ui/AppOpenAdActivity$z;->z:Lcom/taurusx/tax/ui/AppOpenAdActivity;
+
+    invoke-static {p3}, Lcom/taurusx/tax/ui/AppOpenAdActivity;->w(Lcom/taurusx/tax/ui/AppOpenAdActivity;)Landroid/widget/LinearLayout;
+
+    move-result-object p3
+
+    invoke-virtual {p3}, Landroid/widget/LinearLayout;->getWidth()I
+
+    move-result p3
+
+    invoke-static {p3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object p3
+
+    invoke-direct {p2, p3}, Ljava/math/BigDecimal;-><init>(Ljava/lang/String;)V
+
+    .line 5
+    invoke-virtual {p2, p1}, Ljava/math/BigDecimal;->multiply(Ljava/math/BigDecimal;)Ljava/math/BigDecimal;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Ljava/math/BigDecimal;->doubleValue()D
+
+    move-result-wide p2
+
+    double-to-int p2, p2
+
+    .line 6
+    new-instance p3, Ljava/math/BigDecimal;
+
+    iget-object p4, p0, Lcom/taurusx/tax/ui/AppOpenAdActivity$z;->z:Lcom/taurusx/tax/ui/AppOpenAdActivity;
+
+    invoke-static {p4}, Lcom/taurusx/tax/ui/AppOpenAdActivity;->w(Lcom/taurusx/tax/ui/AppOpenAdActivity;)Landroid/widget/LinearLayout;
+
+    move-result-object p4
+
+    invoke-virtual {p4}, Landroid/widget/LinearLayout;->getHeight()I
+
+    move-result p4
+
+    invoke-static {p4}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object p4
+
+    invoke-direct {p3, p4}, Ljava/math/BigDecimal;-><init>(Ljava/lang/String;)V
+
+    .line 7
+    invoke-virtual {p3, p1}, Ljava/math/BigDecimal;->multiply(Ljava/math/BigDecimal;)Ljava/math/BigDecimal;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/math/BigDecimal;->doubleValue()D
+
+    move-result-wide p3
+
+    double-to-int p1, p3
+
+    .line 9
+    iget-object p3, p0, Lcom/taurusx/tax/ui/AppOpenAdActivity$z;->z:Lcom/taurusx/tax/ui/AppOpenAdActivity;
+
+    invoke-static {p3}, Lcom/taurusx/tax/ui/AppOpenAdActivity;->m(Lcom/taurusx/tax/ui/AppOpenAdActivity;)Landroid/widget/ImageView;
+
+    move-result-object p3
+
+    invoke-virtual {p3}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object p3
+
+    .line 10
+    iput p2, p3, Landroid/view/ViewGroup$LayoutParams;->width:I
+
+    .line 11
+    iput p1, p3, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    .line 18
+    iget-object p1, p0, Lcom/taurusx/tax/ui/AppOpenAdActivity$z;->z:Lcom/taurusx/tax/ui/AppOpenAdActivity;
+
+    invoke-static {p1}, Lcom/taurusx/tax/ui/AppOpenAdActivity;->m(Lcom/taurusx/tax/ui/AppOpenAdActivity;)Landroid/widget/ImageView;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p3}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-void
+.end method

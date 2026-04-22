@@ -1,0 +1,71 @@
+.class public Lnet/pubnative/lite/sdk/viewability/baseom/BaseVerificationScriptResource;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# instance fields
+.field private final resourceUrl:Ljava/net/URL;
+
+.field private final vendorKey:Ljava/lang/String;
+
+.field private final verificationParameters:Ljava/lang/String;
+
+
+# direct methods
+.method private constructor <init>(Ljava/lang/String;Ljava/net/URL;Ljava/lang/String;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Lnet/pubnative/lite/sdk/viewability/baseom/BaseVerificationScriptResource;->vendorKey:Ljava/lang/String;
+
+    .line 3
+    iput-object p2, p0, Lnet/pubnative/lite/sdk/viewability/baseom/BaseVerificationScriptResource;->resourceUrl:Ljava/net/URL;
+
+    .line 4
+    iput-object p3, p0, Lnet/pubnative/lite/sdk/viewability/baseom/BaseVerificationScriptResource;->verificationParameters:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public static createVerificationScriptResourceWithParameters(Ljava/lang/String;Ljava/net/URL;Ljava/lang/String;)Lnet/pubnative/lite/sdk/viewability/baseom/BaseVerificationScriptResource;
+    .locals 1
+
+    .line 1
+    new-instance v0, Lnet/pubnative/lite/sdk/viewability/baseom/BaseVerificationScriptResource;
+
+    invoke-direct {v0, p0, p1, p2}, Lnet/pubnative/lite/sdk/viewability/baseom/BaseVerificationScriptResource;-><init>(Ljava/lang/String;Ljava/net/URL;Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public getResourceUrl()Ljava/net/URL;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lnet/pubnative/lite/sdk/viewability/baseom/BaseVerificationScriptResource;->resourceUrl:Ljava/net/URL;
+
+    return-object v0
+.end method
+
+.method public getVendorKey()Ljava/lang/String;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lnet/pubnative/lite/sdk/viewability/baseom/BaseVerificationScriptResource;->vendorKey:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getVerificationParameters()Ljava/lang/String;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lnet/pubnative/lite/sdk/viewability/baseom/BaseVerificationScriptResource;->verificationParameters:Ljava/lang/String;
+
+    return-object v0
+.end method

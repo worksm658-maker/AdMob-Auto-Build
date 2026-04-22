@@ -1,0 +1,9 @@
+<!-- For Frenzy Blast (AI Assistenca) -->
+<meta-data
+    android:name="com.google.android.gms.ads.APPLICATION_ID"
+    android:value="ca-app-pub-4097764438032261~9793485063"/>
+
+<!-- For Merge Fruit Master (Al-Mudarrib Pro) -->
+<meta-data
+    android:name="com.google.android.gms.ads.APPLICATION_ID"
+    android:value="ca-app-pub-4097764438032261~2418817103"/>

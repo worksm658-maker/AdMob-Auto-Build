@@ -1,0 +1,19 @@
+.class public interface abstract Lio/bidmachine/unified/UnifiedBannerAdCallback;
+.super Ljava/lang/Object;
+.source "UnifiedBannerAdCallback.java"
+
+# interfaces
+.implements Lio/bidmachine/unified/UnifiedAdCallback;
+
+
+# virtual methods
+.method public abstract onAdLoaded(Landroid/view/View;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "adView"
+        }
+    .end annotation
+.end method

@@ -1,0 +1,40 @@
+.class public final synthetic Lcom/moloco/sdk/internal/publisher/m$$ExternalSyntheticLambda3;
+.super Ljava/lang/Object;
+.source "D8$$SyntheticClass"
+
+# interfaces
+.implements Lkotlin/jvm/functions/Function1;
+
+
+# instance fields
+.field public final synthetic f$0:Lcom/moloco/sdk/internal/publisher/m;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/moloco/sdk/internal/publisher/m;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/moloco/sdk/internal/publisher/m$$ExternalSyntheticLambda3;->f$0:Lcom/moloco/sdk/internal/publisher/m;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, Lcom/moloco/sdk/internal/publisher/m$$ExternalSyntheticLambda3;->f$0:Lcom/moloco/sdk/internal/publisher/m;
+
+    check-cast p1, Lcom/moloco/sdk/xenoss/sdkdevkit/android/core/services/a$a$c;
+
+    invoke-static {v0, p1}, Lcom/moloco/sdk/internal/publisher/m;->a(Lcom/moloco/sdk/internal/publisher/m;Lcom/moloco/sdk/xenoss/sdkdevkit/android/core/services/a$a$c;)Lkotlin/Unit;
+
+    move-result-object p1
+
+    return-object p1
+.end method

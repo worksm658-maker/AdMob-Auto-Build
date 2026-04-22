@@ -1,0 +1,114 @@
+.class final Lcom/bytedance/sdk/openadsdk/zAx/Ks$39;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/bytedance/sdk/openadsdk/CwT/Ks/OMn;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/bytedance/sdk/openadsdk/zAx/Ks;->OMn(Lcom/bytedance/sdk/openadsdk/core/model/SG;Ljava/lang/String;JLorg/json/JSONObject;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x8
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic DY:Lorg/json/JSONObject;
+
+.field final synthetic OMn:J
+
+
+# direct methods
+.method constructor <init>(JLorg/json/JSONObject;)V
+    .locals 0
+
+    .line 1531
+    iput-wide p1, p0, Lcom/bytedance/sdk/openadsdk/zAx/Ks$39;->OMn:J
+
+    iput-object p3, p0, Lcom/bytedance/sdk/openadsdk/zAx/Ks$39;->DY:Lorg/json/JSONObject;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public OMn()Lorg/json/JSONObject;
+    .locals 5
+
+    .line 1534
+    new-instance v0, Lorg/json/JSONObject;
+
+    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
+
+    .line 1536
+    :try_start_0
+    iget-wide v1, p0, Lcom/bytedance/sdk/openadsdk/zAx/Ks$39;->OMn:J
+
+    const-wide/16 v3, -0x1
+
+    cmp-long v3, v1, v3
+
+    if-eqz v3, :cond_0
+
+    .line 1537
+    const-string v3, "duration"
+
+    invoke-virtual {v0, v3, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+
+    .line 1539
+    :cond_0
+    iget-object v1, p0, Lcom/bytedance/sdk/openadsdk/zAx/Ks$39;->DY:Lorg/json/JSONObject;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    const-string v2, "ad_extra_data"
+
+    if-eqz v1, :cond_1
+
+    .line 1540
+    :try_start_1
+    invoke-virtual {v1}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    return-object v0
+
+    .line 1542
+    :cond_1
+    new-instance v1, Lorg/json/JSONObject;
+
+    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
+
+    invoke-virtual {v1}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+
+    return-object v0
+
+    :catch_0
+    move-exception v1
+
+    .line 1546
+    const-string v2, "TTAD.AdEvent"
+
+    invoke-virtual {v1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v2, v1}, Lcom/bytedance/sdk/component/utils/cb;->Ks(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v0
+.end method

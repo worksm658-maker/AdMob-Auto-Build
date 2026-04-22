@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="35.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/line" android:background="#ffffc4a6" android:layout_width="0.0dip" android:layout_height="2.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+    <com.frenzy.blast.v.BorderTextView android:textSize="16.0sp" android:textColor="#ffc96523" android:id="@id/level" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/j700" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:strokeColor="#ffb05100" app:strokeWidth="0.70000005dip" />
+    <com.frenzy.blast.v.BorderTextView android:textSize="16.0sp" android:textColor="@color/white" android:id="@id/rate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/j700" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:strokeColor="#ffb05100" app:strokeWidth="0.70000005dip" />
+</androidx.constraintlayout.widget.ConstraintLayout>

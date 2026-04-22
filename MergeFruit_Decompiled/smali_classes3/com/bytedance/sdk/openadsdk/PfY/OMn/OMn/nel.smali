@@ -1,0 +1,46 @@
+.class public Lcom/bytedance/sdk/openadsdk/PfY/OMn/OMn/nel;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# direct methods
+.method public static OMn(Landroid/content/Context;Ljava/lang/String;)Lcom/bytedance/sdk/openadsdk/PfY/OMn/OMn/Si;
+    .locals 1
+
+    .line 14
+    invoke-static {}, Lcom/bytedance/sdk/openadsdk/PfY/OMn/OMn/Ks;->OMn()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 15
+    new-instance v0, Lcom/bytedance/sdk/openadsdk/PfY/OMn/OMn/URh;
+
+    invoke-direct {v0, p0, p1}, Lcom/bytedance/sdk/openadsdk/PfY/OMn/OMn/URh;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+
+    return-object v0
+
+    .line 18
+    :cond_0
+    invoke-static {p0}, Lcom/bytedance/sdk/openadsdk/utils/PN;->zAx(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 19
+    new-instance v0, Lcom/bytedance/sdk/openadsdk/PfY/OMn/OMn/zAx;
+
+    invoke-direct {v0, p0, p1}, Lcom/bytedance/sdk/openadsdk/PfY/OMn/OMn/zAx;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+
+    return-object v0
+
+    .line 21
+    :cond_1
+    new-instance v0, Lcom/bytedance/sdk/openadsdk/PfY/OMn/OMn/OMn;
+
+    invoke-direct {v0, p0, p1}, Lcom/bytedance/sdk/openadsdk/PfY/OMn/OMn/OMn;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+
+    return-object v0
+.end method

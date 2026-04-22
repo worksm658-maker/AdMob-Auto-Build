@@ -1,0 +1,39 @@
+.class public abstract Lcom/kuaishou/security/kste/logic/model/BCInvokeTask$Builder;
+.super Ljava/lang/Object;
+.source ""
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public abstract appkey(Ljava/lang/String;)Lcom/kuaishou/security/kste/logic/model/BCInvokeTask$Builder;
+.end method
+
+.method public abstract build()Lcom/kuaishou/security/kste/logic/model/BCInvokeTask;
+.end method
+
+.method public abstract input([B)Lcom/kuaishou/security/kste/logic/model/BCInvokeTask$Builder;
+.end method
+
+.method public abstract kpn(Ljava/lang/String;)Lcom/kuaishou/security/kste/logic/model/BCInvokeTask$Builder;
+.end method
+
+.method public abstract maxOutLen(I)Lcom/kuaishou/security/kste/logic/model/BCInvokeTask$Builder;
+.end method
+
+.method public abstract taskTag(Ljava/lang/String;)Lcom/kuaishou/security/kste/logic/model/BCInvokeTask$Builder;
+.end method
+
+.method public abstract timeout(J)Lcom/kuaishou/security/kste/logic/model/BCInvokeTask$Builder;
+.end method
+
+.method public abstract vmBizId(Ljava/lang/String;)Lcom/kuaishou/security/kste/logic/model/BCInvokeTask$Builder;
+.end method

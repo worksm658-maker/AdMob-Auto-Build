@@ -1,0 +1,335 @@
+.class public Lcom/bytedance/sdk/openadsdk/mediation/Xk/URh;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# static fields
+.field private static OMn:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap<",
+            "Ljava/lang/String;",
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/String;",
+            ">;>;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    .line 21
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    sput-object v0, Lcom/bytedance/sdk/openadsdk/mediation/Xk/URh;->OMn:Ljava/util/HashMap;
+
+    return-void
+.end method
+
+.method private static DY(Landroid/content/Context;Ljava/lang/String;)[Landroid/content/pm/Signature;
+    .locals 1
+
+    .line 72
+    :try_start_0
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object p0
+
+    const/16 v0, 0x40
+
+    invoke-virtual {p0, p1, v0}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+
+    move-result-object p0
+
+    .line 73
+    iget-object p0, p0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p0
+
+    :catch_0
+    move-exception p0
+
+    .line 75
+    invoke-virtual {p0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lcom/bytedance/sdk/openadsdk/mediation/OMn/Ks/OMn;->Ks(Ljava/lang/String;)V
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method private static OMn(Landroid/content/pm/Signature;Ljava/lang/String;)Ljava/lang/String;
+    .locals 6
+
+    .line 88
+    invoke-virtual {p0}, Landroid/content/pm/Signature;->toByteArray()[B
+
+    move-result-object p0
+
+    .line 91
+    :try_start_0
+    invoke-static {p1}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_1
+
+    .line 93
+    invoke-virtual {p1, p0}, Ljava/security/MessageDigest;->digest([B)[B
+
+    move-result-object p0
+
+    .line 94
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    .line 95
+    array-length v0, p0
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    :goto_0
+    const/4 v3, 0x1
+
+    if-ge v2, v0, :cond_0
+
+    aget-byte v4, p0, v2
+
+    and-int/lit16 v4, v4, 0xff
+
+    or-int/lit16 v4, v4, 0x100
+
+    .line 96
+    invoke-static {v4}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    const/4 v5, 0x3
+
+    invoke-virtual {v4, v3, v5}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 97
+    const-string v3, ":"
+
+    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    .line 99
+    :cond_0
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->length()I
+
+    move-result p0
+
+    sub-int/2addr p0, v3
+
+    invoke-virtual {p1, v1, p0}, Ljava/lang/StringBuilder;->substring(II)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/String;->toString()Ljava/lang/String;
+
+    move-result-object p0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p0
+
+    :catch_0
+    move-exception p0
+
+    .line 102
+    invoke-virtual {p0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lcom/bytedance/sdk/openadsdk/mediation/OMn/Ks/OMn;->Ks(Ljava/lang/String;)V
+
+    .line 105
+    :cond_1
+    const-string p0, "error!"
+
+    return-object p0
+.end method
+
+.method public static OMn(Landroid/content/Context;Ljava/lang/String;)Ljava/util/ArrayList;
+    .locals 9
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Ljava/lang/String;",
+            ")",
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    .line 31
+    const-string v0, "SHA256"
+
+    const-string v1, "SHA1"
+
+    const-string v2, "MD5"
+
+    const/4 v3, 0x0
+
+    if-eqz p0, :cond_7
+
+    if-nez p1, :cond_0
+
+    goto :goto_2
+
+    .line 34
+    :cond_0
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v4
+
+    if-nez v4, :cond_1
+
+    return-object v3
+
+    .line 38
+    :cond_1
+    sget-object v3, Lcom/bytedance/sdk/openadsdk/mediation/Xk/URh;->OMn:Ljava/util/HashMap;
+
+    invoke-virtual {v3, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_2
+
+    .line 39
+    sget-object p0, Lcom/bytedance/sdk/openadsdk/mediation/Xk/URh;->OMn:Ljava/util/HashMap;
+
+    invoke-virtual {p0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/util/ArrayList;
+
+    return-object p0
+
+    .line 41
+    :cond_2
+    new-instance v3, Ljava/util/ArrayList;
+
+    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+
+    .line 43
+    :try_start_0
+    invoke-static {p0, v4}, Lcom/bytedance/sdk/openadsdk/mediation/Xk/URh;->DY(Landroid/content/Context;Ljava/lang/String;)[Landroid/content/pm/Signature;
+
+    move-result-object p0
+
+    .line 44
+    array-length v4, p0
+
+    const/4 v5, 0x0
+
+    :goto_0
+    if-ge v5, v4, :cond_6
+
+    aget-object v6, p0, v5
+
+    .line 45
+    const-string v7, "error!"
+
+    .line 46
+    invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_3
+
+    .line 47
+    invoke-static {v6, v2}, Lcom/bytedance/sdk/openadsdk/mediation/Xk/URh;->OMn(Landroid/content/pm/Signature;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v7
+
+    goto :goto_1
+
+    .line 48
+    :cond_3
+    invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_4
+
+    .line 49
+    invoke-static {v6, v1}, Lcom/bytedance/sdk/openadsdk/mediation/Xk/URh;->OMn(Landroid/content/pm/Signature;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v7
+
+    goto :goto_1
+
+    .line 50
+    :cond_4
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_5
+
+    .line 51
+    invoke-static {v6, v0}, Lcom/bytedance/sdk/openadsdk/mediation/Xk/URh;->OMn(Landroid/content/pm/Signature;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v7
+
+    .line 53
+    :cond_5
+    :goto_1
+    invoke-virtual {v3, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p0
+
+    .line 56
+    invoke-virtual {p0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lcom/bytedance/sdk/openadsdk/mediation/OMn/Ks/OMn;->Ks(Ljava/lang/String;)V
+
+    .line 58
+    :cond_6
+    sget-object p0, Lcom/bytedance/sdk/openadsdk/mediation/Xk/URh;->OMn:Ljava/util/HashMap;
+
+    invoke-virtual {p0, p1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_7
+    :goto_2
+    return-object v3
+.end method

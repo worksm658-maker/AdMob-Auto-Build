@@ -1,0 +1,111 @@
+.class Lcom/bytedance/sdk/openadsdk/component/reward/ri/fi$1;
+.super Ljava/lang/Object;
+.source "r8-map-id-7dfb0eae3f6702c581b77ce061402397ffc51803b9460e670aef0bc885b443a3"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/bytedance/sdk/openadsdk/component/reward/ri/fi;->ri(ZZZLcom/bytedance/sdk/openadsdk/component/reward/lr/lr;I)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic ri:Lcom/bytedance/sdk/openadsdk/component/reward/ri/fi;
+
+
+# direct methods
+.method public constructor <init>(Lcom/bytedance/sdk/openadsdk/component/reward/ri/fi;)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lcom/bytedance/sdk/openadsdk/component/reward/ri/fi$1;->ri:Lcom/bytedance/sdk/openadsdk/component/reward/ri/fi;
+
+    .line 2
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    .line 5
+    .line 6
+    return-void
+.end method
+
+
+# virtual methods
+.method public run()V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/bytedance/sdk/openadsdk/component/reward/ri/fi$1;->ri:Lcom/bytedance/sdk/openadsdk/component/reward/ri/fi;
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/bytedance/sdk/openadsdk/component/reward/ri/fi;->ri(Lcom/bytedance/sdk/openadsdk/component/reward/ri/fi;)Lcom/bytedance/sdk/openadsdk/component/reward/ri/ri;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    iget-object v0, v0, Lcom/bytedance/sdk/openadsdk/component/reward/ri/ri;->dzy:Lcom/bytedance/sdk/openadsdk/component/reward/view/sf;
+
+    .line 8
+    .line 9
+    invoke-virtual {v0}, Lcom/bytedance/sdk/openadsdk/component/reward/view/sf;->ik()V
+
+    .line 10
+    .line 11
+    .line 12
+    iget-object v0, p0, Lcom/bytedance/sdk/openadsdk/component/reward/ri/fi$1;->ri:Lcom/bytedance/sdk/openadsdk/component/reward/ri/fi;
+
+    .line 13
+    .line 14
+    invoke-static {v0}, Lcom/bytedance/sdk/openadsdk/component/reward/ri/fi;->ri(Lcom/bytedance/sdk/openadsdk/component/reward/ri/fi;)Lcom/bytedance/sdk/openadsdk/component/reward/ri/ri;
+
+    .line 15
+    .line 16
+    .line 17
+    move-result-object v0
+
+    .line 18
+    iget-object v0, v0, Lcom/bytedance/sdk/openadsdk/component/reward/ri/ri;->ay:Lcom/bytedance/sdk/openadsdk/component/reward/view/jbs;
+
+    .line 19
+    .line 20
+    if-eqz v0, :cond_0
+
+    .line 21
+    .line 22
+    iget-object v0, p0, Lcom/bytedance/sdk/openadsdk/component/reward/ri/fi$1;->ri:Lcom/bytedance/sdk/openadsdk/component/reward/ri/fi;
+
+    .line 23
+    .line 24
+    invoke-static {v0}, Lcom/bytedance/sdk/openadsdk/component/reward/ri/fi;->ri(Lcom/bytedance/sdk/openadsdk/component/reward/ri/fi;)Lcom/bytedance/sdk/openadsdk/component/reward/ri/ri;
+
+    .line 25
+    .line 26
+    .line 27
+    move-result-object v0
+
+    .line 28
+    iget-object v0, v0, Lcom/bytedance/sdk/openadsdk/component/reward/ri/ri;->ay:Lcom/bytedance/sdk/openadsdk/component/reward/view/jbs;
+
+    .line 29
+    .line 30
+    invoke-virtual {v0}, Lcom/bytedance/sdk/openadsdk/component/reward/view/jbs;->di()V
+
+    .line 31
+    .line 32
+    .line 33
+    :cond_0
+    return-void
+.end method

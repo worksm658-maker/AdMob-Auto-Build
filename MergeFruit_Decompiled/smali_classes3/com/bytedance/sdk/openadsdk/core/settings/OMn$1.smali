@@ -1,0 +1,42 @@
+.class Lcom/bytedance/sdk/openadsdk/core/settings/OMn$1;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/bytedance/sdk/openadsdk/core/settings/UYz$OMn;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/bytedance/sdk/openadsdk/core/settings/OMn;-><init>()V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# direct methods
+.method constructor <init>()V
+    .locals 0
+
+    .line 12
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public DY()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public OMn()V
+    .locals 0
+
+    return-void
+.end method

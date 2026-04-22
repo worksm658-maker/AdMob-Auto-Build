@@ -1,0 +1,15 @@
+.class public final enum Landroidx/datastore/preferences/protobuf/i6;
+.super Landroidx/datastore/preferences/protobuf/WireFormat$FieldType;
+.source "r8-map-id-7dfb0eae3f6702c581b77ce061402397ffc51803b9460e670aef0bc885b443a3"
+
+
+# virtual methods
+.method public final isPackable()Z
+    .locals 1
+
+    .line 1
+    const/4 v0, 0x0
+
+    .line 2
+    return v0
+.end method

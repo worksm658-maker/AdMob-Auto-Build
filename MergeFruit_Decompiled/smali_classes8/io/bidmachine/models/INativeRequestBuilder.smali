@@ -1,0 +1,35 @@
+.class public interface abstract Lio/bidmachine/models/INativeRequestBuilder;
+.super Ljava/lang/Object;
+.source "INativeRequestBuilder.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<SelfType::",
+        "Lio/bidmachine/models/INativeRequestBuilder;",
+        ">",
+        "Ljava/lang/Object;"
+    }
+.end annotation
+
+
+# virtual methods
+.method public varargs abstract setMediaAssetTypes([Lio/bidmachine/MediaAssetType;)Lio/bidmachine/models/INativeRequestBuilder;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "types"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "([",
+            "Lio/bidmachine/MediaAssetType;",
+            ")TSelfType;"
+        }
+    .end annotation
+.end method

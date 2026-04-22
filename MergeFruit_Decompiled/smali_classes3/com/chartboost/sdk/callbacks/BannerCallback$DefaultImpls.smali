@@ -1,0 +1,39 @@
+.class public final Lcom/chartboost/sdk/callbacks/BannerCallback$DefaultImpls;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/chartboost/sdk/callbacks/BannerCallback;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "DefaultImpls"
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    k = 0x3
+    mv = {
+        0x1,
+        0x9,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# direct methods
+.method public static onAdExpired(Lcom/chartboost/sdk/callbacks/BannerCallback;Lcom/chartboost/sdk/events/ExpirationEvent;)V
+    .locals 1
+
+    const-string v0, "event"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    invoke-static {p0, p1}, Lcom/chartboost/sdk/callbacks/AdCallback$DefaultImpls;->onAdExpired(Lcom/chartboost/sdk/callbacks/AdCallback;Lcom/chartboost/sdk/events/ExpirationEvent;)V
+
+    return-void
+.end method

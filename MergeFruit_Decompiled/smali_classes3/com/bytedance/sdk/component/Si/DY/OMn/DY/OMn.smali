@@ -1,0 +1,369 @@
+.class public Lcom/bytedance/sdk/component/Si/DY/OMn/DY/OMn;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# direct methods
+.method private static DY(ILandroid/content/Context;)J
+    .locals 12
+
+    if-nez p1, :cond_0
+
+    int-to-long p0, p0
+
+    return-wide p0
+
+    .line 37
+    :cond_0
+    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
+
+    move-result-object p1
+
+    .line 38
+    invoke-virtual {p1}, Ljava/lang/Runtime;->freeMemory()J
+
+    move-result-wide v0
+
+    const-wide/32 v2, 0x100000
+
+    div-long/2addr v0, v2
+
+    .line 39
+    invoke-virtual {p1}, Ljava/lang/Runtime;->totalMemory()J
+
+    move-result-wide v4
+
+    div-long/2addr v4, v2
+
+    .line 40
+    invoke-virtual {p1}, Ljava/lang/Runtime;->maxMemory()J
+
+    move-result-wide v6
+
+    div-long/2addr v6, v2
+
+    sub-long/2addr v6, v4
+
+    const-wide/16 v2, 0x0
+
+    cmp-long p1, v6, v2
+
+    const/16 v2, 0xa
+
+    const-wide/16 v3, 0x1
+
+    const-wide/16 v8, 0x2
+
+    const-wide/16 v10, 0xa
+
+    if-gtz p1, :cond_3
+
+    cmp-long p1, v0, v8
+
+    if-gtz p1, :cond_1
+
+    return-wide v3
+
+    :cond_1
+    cmp-long p1, v0, v10
+
+    if-gtz p1, :cond_2
+
+    .line 49
+    invoke-static {p0, v2}, Ljava/lang/Math;->min(II)I
+
+    move-result p0
+
+    int-to-long p0, p0
+
+    return-wide p0
+
+    .line 51
+    :cond_2
+    div-long/2addr v0, v8
+
+    mul-long/2addr v0, v10
+
+    int-to-long p0, p0
+
+    .line 52
+    invoke-static {v0, v1, p0, p1}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide p0
+
+    return-wide p0
+
+    :cond_3
+    add-long/2addr v0, v6
+
+    sub-long/2addr v0, v10
+
+    .line 56
+    div-long/2addr v0, v8
+
+    cmp-long p1, v0, v8
+
+    if-gtz p1, :cond_4
+
+    return-wide v3
+
+    :cond_4
+    cmp-long p1, v0, v10
+
+    if-gtz p1, :cond_5
+
+    .line 62
+    invoke-static {p0, v2}, Ljava/lang/Math;->min(II)I
+
+    move-result p0
+
+    int-to-long p0, p0
+
+    return-wide p0
+
+    :cond_5
+    mul-long/2addr v0, v10
+
+    int-to-long p0, p0
+
+    .line 64
+    invoke-static {v0, v1, p0, p1}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide p0
+
+    return-wide p0
+.end method
+
+.method public static DY()Z
+    .locals 1
+
+    .line 82
+    invoke-static {}, Lcom/bytedance/sdk/component/Si/DY/OMn/XX;->nel()Lcom/bytedance/sdk/component/Si/DY/OMn/XX;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bytedance/sdk/component/Si/DY/OMn/XX;->zAx()Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/URh;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 83
+    invoke-interface {v0}, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/URh;->DY()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public static Ks()Z
+    .locals 1
+
+    .line 87
+    invoke-static {}, Lcom/bytedance/sdk/component/Si/DY/OMn/XX;->nel()Lcom/bytedance/sdk/component/Si/DY/OMn/XX;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bytedance/sdk/component/Si/DY/OMn/XX;->zAx()Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/URh;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 88
+    invoke-interface {v0}, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/URh;->zAx()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public static OMn(ILandroid/content/Context;)J
+    .locals 2
+
+    .line 27
+    invoke-static {p0, p1}, Lcom/bytedance/sdk/component/Si/DY/OMn/DY/OMn;->DY(ILandroid/content/Context;)J
+
+    move-result-wide p0
+
+    .line 28
+    const-string v0, "ad limit by memory:"
+
+    invoke-static {p0, p1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/bytedance/sdk/component/Si/DY/OMn/Ks/Ks;->OMn(Ljava/lang/String;)V
+
+    return-wide p0
+.end method
+
+.method public static OMn()Z
+    .locals 1
+
+    .line 77
+    invoke-static {}, Lcom/bytedance/sdk/component/Si/DY/OMn/XX;->nel()Lcom/bytedance/sdk/component/Si/DY/OMn/XX;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bytedance/sdk/component/Si/DY/OMn/XX;->zAx()Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/URh;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 78
+    invoke-interface {v0}, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/URh;->OMn()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public static Si()Z
+    .locals 1
+
+    .line 102
+    invoke-static {}, Lcom/bytedance/sdk/component/Si/DY/OMn/XX;->nel()Lcom/bytedance/sdk/component/Si/DY/OMn/XX;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bytedance/sdk/component/Si/DY/OMn/XX;->zAx()Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/URh;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 103
+    invoke-interface {v0}, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/URh;->Si()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public static URh()Z
+    .locals 1
+
+    .line 97
+    invoke-static {}, Lcom/bytedance/sdk/component/Si/DY/OMn/XX;->nel()Lcom/bytedance/sdk/component/Si/DY/OMn/XX;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bytedance/sdk/component/Si/DY/OMn/XX;->zAx()Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/URh;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 98
+    invoke-interface {v0}, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/URh;->Ks()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public static zAx()Z
+    .locals 1
+
+    .line 92
+    invoke-static {}, Lcom/bytedance/sdk/component/Si/DY/OMn/XX;->nel()Lcom/bytedance/sdk/component/Si/DY/OMn/XX;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bytedance/sdk/component/Si/DY/OMn/XX;->zAx()Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/URh;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 93
+    invoke-interface {v0}, Lcom/bytedance/sdk/component/Si/DY/OMn/OMn/URh;->URh()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method

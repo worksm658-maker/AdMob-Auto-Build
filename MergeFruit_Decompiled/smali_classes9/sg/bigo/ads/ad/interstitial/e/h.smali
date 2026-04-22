@@ -1,0 +1,23 @@
+.class public final Lsg/bigo/ads/ad/interstitial/e/h;
+.super Lsg/bigo/ads/ad/interstitial/e/f;
+
+
+# direct methods
+.method public constructor <init>(Lsg/bigo/ads/ad/interstitial/e/b/a;Ljava/util/List;Lsg/bigo/ads/ad/interstitial/e/a/b;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lsg/bigo/ads/ad/interstitial/e/b/a;",
+            "Ljava/util/List<",
+            "Lsg/bigo/ads/api/NativeAd;",
+            ">;",
+            "Lsg/bigo/ads/ad/interstitial/e/a/b;",
+            ")V"
+        }
+    .end annotation
+
+    invoke-direct {p0, p1, p2, p3}, Lsg/bigo/ads/ad/interstitial/e/f;-><init>(Lsg/bigo/ads/ad/interstitial/e/b/a;Ljava/util/List;Lsg/bigo/ads/ad/interstitial/e/a/b;)V
+
+    return-void
+.end method
