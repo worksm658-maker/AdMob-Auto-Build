@@ -3,6 +3,8 @@ import json
 import logging
 import os
 import random
+import pytesseract
+from PIL import Image
 from datetime import datetime, timedelta
 
 # Konfigurasi Logging
@@ -36,37 +38,40 @@ class AIAgent:
         logger.info(f"=== Omni-AI Agent 24 Jam Aktif (Target: Rp 111k - 999k) ===")
 
     def read_screen(self):
-        logger.info("[SENSOR] Memanggil Akasha Dana Neural untuk membaca saldo real...")
+        """Mata AI menggunakan OCR Nyata untuk membaca saldo dari layar"""
+        img_path = "vision_input.png"
+        logger.info("[VISION] Memindai layar secara visual...")
+        os.system(f"screencap -p {img_path} || touch {img_path}")
+        
         try:
-            # Jalankan pembaca saldo dana asli
-            os.system("python3 ../aibashira_dana_neural.py")
-            # Baca memori terbaru dari Dana
-            import glob
-            files = glob.glob("../aibashira_profile/dana_neural_memory/memory_*.json")
-            if files:
-                latest_file = max(files, key=os.path.getmtime)
-                with open(latest_file, 'r') as f:
-                    data = json.load(f)
-                    html = data.get("html_structure", "")
-                    # Ekstrak saldo dari teks (logika sederhana)
-                    if "Log Out" in html.lower():
-                        return "Saldo: Rp 10.000, Status: AdMob Active" # Dummy sementara sampai regex matang
-            return "Saldo: Rp 0, Status: Checking"
+            if os.path.exists(img_path) and os.path.getsize(img_path) > 0:
+                text = pytesseract.image_to_string(Image.open(img_path))
+                logger.info(f"[VISION] Hasil Scan: {text[:50].replace('\n', ' ')}")
+                if "Rp" in text:
+                    return text
+            return "Saldo: Rp 0, Status: Waiting"
         except:
-            return "Saldo: Rp 0, Status: Error Connection"
+            return "Saldo: Rp 0, Status: Vision Off"
 
     def calculate_target(self, data):
         kurs_usd = 16000
         try:
-            saldo = int(data.split("Rp")[1].split(",")[0].replace(".", "").strip())
+            # Mencari angka setelah 'Rp'
+            parts = data.split("Rp")[1].split()[0].replace(".", "").replace(",", "").strip()
+            saldo = int(''.join(filter(str.isdigit, parts)))
             usd = saldo / kurs_usd
             if saldo >= 111111:
                 return True, f"Rp {saldo:,} (${usd:.2f}) - TARGET TERCAPAI"
             return False, f"Rp {saldo:,} (${usd:.2f}) - MENGEJAR TARGET"
-        except: return False, "Gagal menganalisis saldo"
+        except: return False, "Mencari data saldo di layar..."
 
     def send_whatsapp_notification(self, message):
+        logger.info("[WHATSAPP] Mengirim laporan...")
         os.system(f"python3 ../whatsapp_business_master.py --send '{message}'")
+
+    def github_cloud_manager(self):
+        logger.info("[CLOUD] Sync ke Cloud...")
+        os.system("git add . && git commit -m 'Auto-Optimize via Vision' && git push origin master --force")
 
     def execute_action(self, action_type):
         logger.info(f"[EKSEKUSI] {action_type}")
@@ -77,60 +82,34 @@ class AIAgent:
 
     def check_rest_period(self):
         now = datetime.now()
-        # Menggunakan jam saat ini untuk simulasi "mulai dari sekarang" jika diperlukan, 
-        # namun jadwal tetap dipertahankan.
         prayer_times = {"Tahajjud": "03:00", "Subuh": "04:45", "Dhuhur": "12:00", "Ashar": "15:15", "Maghrib": "18:00", "Isya": "19:15"}
-        
         for name, p_time in prayer_times.items():
             p_hour, p_min = map(int, p_time.split(":"))
             start_rest = now.replace(hour=p_hour, minute=p_min, second=0, microsecond=0)
             duration = timedelta(minutes=99, seconds=9) if name == "Tahajjud" else timedelta(hours=1, minutes=11, seconds=1)
-            
-            # Toleransi jika waktu saat ini berada di dalam rentang istirahat
-            if start_rest <= now <= (start_rest + duration): 
-                return name, (start_rest + duration)
+            if start_rest <= now <= (start_rest + duration): return name, (start_rest + duration)
         return None, None
-
-    def listen_to_prayer_broadcast(self, prayer_name):
-        """AI menyetel saluran Live Streaming (Makkah/Radio) saat waktu shalat"""
-        channels = [
-            "https://www.youtube.com/watch?v=b4O520t1AUM", # Live Makkah
-            "https://www.youtube.com/watch?v=FqXvB5V2Poo", # Live Madinah
-            "https://www.radioislam.com"                   # Radio Web
-        ]
-        selected_channel = random.choice(channels)
-        logger.info(f"[SPIRITUAL] Waktu {prayer_name} tiba. AI menyetel saluran Live Streaming Shalat / Satelit Makkah: {selected_channel}")
-        
-        # Membuka tautan melalui browser HP (Termux)
-        os.system(f"termux-open-url '{selected_channel}'")
-        logger.info(f"[SPIRITUAL] AI sedang khusyuk mendengarkan lantunan shalat hingga waktu istirahat selesai...")
 
     def start_cycle(self):
         while True:
             prayer_name, wake_up = self.check_rest_period()
-            
             if prayer_name:
                 wait = (wake_up - datetime.now()).total_seconds()
-                # Panggil fungsi mendengarkan siaran live
-                self.listen_to_prayer_broadcast(prayer_name)
-                
-                logger.info(f"[REST] AI Istirahat & Mendengarkan Shalat hingga {wake_up.strftime('%H:%M:%S')} ({int(wait)} detik tersisa).")
+                logger.info(f"[REST] Waktu {prayer_name}. Memutar siaran spiritual...")
+                os.system("termux-open-url 'https://www.youtube.com/watch?v=FqXvB5V2Poo'")
                 time.sleep(max(0, wait))
-                logger.info(f"[WAKE UP] Selesai mendengarkan shalat {prayer_name}. Kembali bekerja mengejar target!")
+            
+            logger.info("[WORK] Menganalisis layar untuk target harian...")
+            data = self.read_screen()
+            tercapai, status_msg = self.calculate_target(data)
+            logger.info(f"[STATUS] {status_msg}")
+            
+            if tercapai:
+                self.execute_action("WITHDRAW_DANA")
             else:
-                logger.info("[WORK] Memulai pemeriksaan target harian...")
-                data = self.read_screen()
-                tercapai, status_msg = self.calculate_target(data)
-                logger.info(f"[STATUS] {status_msg}")
-                
-                if tercapai:
-                    self.execute_action("WITHDRAW_DANA")
-                else:
-                    logger.info("[STRATEGI] Target belum tercapai. Mengoptimalkan iklan...")
-                    os.system("git add . && git commit -m 'Auto-Optimize' && git push origin master --force")
-                
-                # Tunggu siklus berikutnya
-                time.sleep(3600)
+                self.github_cloud_manager()
+            
+            time.sleep(3600)
 
 if __name__ == "__main__":
     agent = AIAgent()
