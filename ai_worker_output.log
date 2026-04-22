@@ -42,3 +42,43 @@ sh: scrot: inaccessible or not found
 [10916:10916:0422/224213.388751:ERROR:./../src/dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
 [10916:11149:0422/224235.309893:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 11702: Permission denied (13)
 [10916:10977:0422/224239.232183:ERROR:./../src/google_apis/gcm/engine/registration_request.cc:292] Registration response error message: DEPRECATED_ENDPOINT
+[10916:10977:0422/224303.977973:ERROR:./../src/google_apis/gcm/engine/registration_request.cc:292] Registration response error message: DEPRECATED_ENDPOINT
+[10916:11149:0422/224312.149361:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 12612: Permission denied (13)
+[10916:11149:0422/224314.365712:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 12704: Permission denied (13)
+[10916:11149:0422/224317.574893:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 12759: Permission denied (13)
+[10916:11149:0422/224317.739434:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 12782: Permission denied (13)
+[10916:11149:0422/224322.115265:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 12818: Permission denied (13)
+[10916:11149:0422/224327.270604:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 12985: Permission denied (13)
+[10916:11149:0422/224329.067070:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 13011: Permission denied (13)
+[10916:11149:0422/224330.239935:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 13050: Permission denied (13)
+[10916:11149:0422/224335.047125:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 13176: Permission denied (13)
+[master 6be182553] Auto-Sync Virtual
+ 2 files changed, 83 insertions(+), 27 deletions(-)
+To https://github.com/worksm658-maker/AdMob-Auto-Build.git
+   f307ba743..6be182553  master -> master
+[10916:11149:0422/224339.928471:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 13286: Permission denied (13)
+[10916:11149:0422/224345.493954:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 13364: Permission denied (13)
+[10916:11149:0422/224348.272083:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 13398: Permission denied (13)
+[10916:10977:0422/224349.054299:ERROR:./../src/google_apis/gcm/engine/registration_request.cc:292] Registration response error message: DEPRECATED_ENDPOINT
+[10916:11149:0422/224349.320874:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 13424: Permission denied (13)
+[10916:11149:0422/224353.423107:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 13467: Permission denied (13)
+[10916:11149:0422/224357.484940:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 13695: Permission denied (13)
+Warning: vkCreateInstance: Found no drivers!
+Warning: vkCreateInstance failed with VK_ERROR_INCOMPATIBLE_DRIVER
+    at CheckVkSuccessImpl (../../../src/third_party/dawn/src/dawn/native/vulkan/VulkanError.cpp:106)
+
+Warning: Couldn't get proc eglChooseConfig
+ - While trying to discover a BackendType::OpenGLES adapter.
+    at LoadClientProcs (../../../src/third_party/dawn/src/dawn/native/opengl/EGLFunctions.cpp:119)
+
+[10916:11149:0422/224414.201996:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 14022: Permission denied (13)
+[10916:11149:0422/224417.365507:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 14087: Permission denied (13)
+[10916:10977:0422/224541.209750:ERROR:./../src/google_apis/gcm/engine/registration_request.cc:292] Registration response error message: DEPRECATED_ENDPOINT
+[10916:10977:0422/224826.024904:ERROR:./../src/google_apis/gcm/engine/registration_request.cc:292] Registration response error message: DEPRECATED_ENDPOINT
+[10916:10977:0422/225604.147876:ERROR:./../src/google_apis/gcm/engine/registration_request.cc:292] Registration response error message: DEPRECATED_ENDPOINT
+[10916:11149:0422/230133.733531:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 27406: Permission denied (13)
+[10916:11149:0422/230133.900338:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 27418: Permission denied (13)
+2026-04-22 23:43:40,010 - Omni-AI-Worker - [INFO] - [WORK] Menganalisis target via Virtual Vision...
+2026-04-22 23:43:40,021 - Omni-AI-Worker - [INFO] - [VISION] Memindai layar virtual (VNC :1)...
+2026-04-22 23:43:44,906 - Omni-AI-Worker - [INFO] - [VISION] Hasil Scan Virtual: 2 Applications = @ Google AdMob - Eam M..  dMob - 
+2026-04-22 23:43:44,906 - Omni-AI-Worker - [INFO] - [STATUS] Rp 0 - MENGEJAR TARGET
