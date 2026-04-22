@@ -21,6 +21,8 @@
     .line 16
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-static {p0}, Lcom/admob/helper/AdMobManager;->init(Landroid/app/Activity;)V
+
     .line 17
     invoke-virtual {p0}, Lcom/merge2048/fruit/FlashEntry;->isTaskRoot()Z
 

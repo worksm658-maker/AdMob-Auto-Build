@@ -7,6 +7,11 @@
     ],
     "facts": {
         "Status_Terakhir": "Hasil analisis: Target harian tercapai 75%.",
-        "Analisis_Terakhir": "Analisis: Saldo: Rp 275.000, Status: AdMob Active -> Target tercapai."
+        "Analisis_Terakhir": "Analisis: Saldo: Rp 275.000, Status: AdMob Active -> Target tercapai.",
+        "withdrawal_account": {
+            "paypal": "rahmatfala4@gmail.com",
+            "ewallet": "085163707103",
+            "name": "A RAHMAT MAGFIRA"
+        }
     }
 }

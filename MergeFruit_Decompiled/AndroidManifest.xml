@@ -114,7 +114,7 @@
     <uses-permission android:name="com.merge2048.fruit.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
     <application android:allowBackup="true" android:appCategory="game" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:extractNativeLibs="false" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:name="com.merge2048.fruit.App2048" android:usesCleartextTraffic="false">
         <meta-data android:name="android.app.lib_name" android:value="cocos2djs"/>
-        <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-1075937392225814~6249416758"/>
+        <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-4097764438032261~2418817103"/>
         <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|uiMode" android:exported="true" android:hardwareAccelerated="false" android:label="@string/app_name" android:launchMode="singleTop" android:name="com.merge2048.fruit.FlashEntry" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

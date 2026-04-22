@@ -1,4 +1,4 @@
-name: Android APK Build (AdMob Injection)
+name: Android APK Build (Dual Game Injection)
 
 on:
   push:
@@ -23,17 +23,22 @@ jobs:
       run: |
         curl -L https://github.com/iBotPeaches/Apktool/releases/download/v2.9.3/apktool_2.9.3.jar -o apktool.jar
 
-    - name: Build Modded APK
+    - name: Build Frenzy Blast
       run: |
         if [ -d "FrenzyBlast_Decompiled" ]; then
           java -jar apktool.jar b FrenzyBlast_Decompiled -o FrenzyBlast_Modded.apk
-        else
-          echo "Error: FrenzyBlast_Decompiled directory not found!"
-          exit 1
         fi
 
-    - name: Upload APK Artifact
+    - name: Build Merge Fruit Master
+      run: |
+        if [ -d "MergeFruit_Decompiled" ]; then
+          java -jar apktool.jar b MergeFruit_Decompiled -o MergeFruit_Modded.apk
+        fi
+
+    - name: Upload Artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: FrenzyBlast-AdMob-Build
-        path: FrenzyBlast_Modded.apk
+        name: Injected-Games-Pack
+        path: |
+          FrenzyBlast_Modded.apk
+          MergeFruit_Modded.apk
