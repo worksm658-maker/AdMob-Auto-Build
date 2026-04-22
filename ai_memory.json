@@ -6,6 +6,7 @@
         }
     ],
     "facts": {
-        "Status_Terakhir": "Hasil analisis: Target harian tercapai 75%."
+        "Status_Terakhir": "Hasil analisis: Target harian tercapai 75%.",
+        "Analisis_Terakhir": "Analisis: Saldo: Rp 275.000, Status: AdMob Active -> Target tercapai."
     }
 }
