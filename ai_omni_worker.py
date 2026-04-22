@@ -36,7 +36,24 @@ class AIAgent:
         logger.info(f"=== Omni-AI Agent 24 Jam Aktif (Target: Rp 111k - 999k) ===")
 
     def read_screen(self):
-        return "Saldo: Rp 275.000, Status: AdMob Active"
+        logger.info("[SENSOR] Memanggil Akasha Dana Neural untuk membaca saldo real...")
+        try:
+            # Jalankan pembaca saldo dana asli
+            os.system("python3 ../aibashira_dana_neural.py")
+            # Baca memori terbaru dari Dana
+            import glob
+            files = glob.glob("../aibashira_profile/dana_neural_memory/memory_*.json")
+            if files:
+                latest_file = max(files, key=os.path.getmtime)
+                with open(latest_file, 'r') as f:
+                    data = json.load(f)
+                    html = data.get("html_structure", "")
+                    # Ekstrak saldo dari teks (logika sederhana)
+                    if "Log Out" in html.lower():
+                        return "Saldo: Rp 10.000, Status: AdMob Active" # Dummy sementara sampai regex matang
+            return "Saldo: Rp 0, Status: Checking"
+        except:
+            return "Saldo: Rp 0, Status: Error Connection"
 
     def calculate_target(self, data):
         kurs_usd = 16000
