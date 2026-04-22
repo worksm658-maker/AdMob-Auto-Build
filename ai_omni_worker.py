@@ -35,39 +35,53 @@ class AIAgent:
     def __init__(self, role="Manager & Developer"):
         self.role = role
         self.memory = AIMemory()
-        logger.info(f"=== Omni-AI Agent 24 Jam (Rish Vision Enabled) ===")
+        self.display = ":1" # Display Virtual
+        logger.info(f"=== Omni-AI Agent 24 Jam (VNC Virtual Vision) ===")
+        self.setup_vnc()
+
+    def setup_vnc(self):
+        """Menyiapkan Server VNC untuk Layar Virtual"""
+        logger.info("[VNC] Memastikan server layar virtual aktif...")
+        # Cek jika lock file ada (VNC sedang berjalan)
+        if not os.path.exists("/data/data/com.termux/files/usr/tmp/.X1-lock"):
+            os.system(f"vncserver {self.display} -geometry 1280x720 -depth 24")
+            logger.info("[VNC] Server dimulai pada display :1")
+        else:
+            logger.info("[VNC] Server sudah berjalan.")
 
     def read_screen(self):
-        """Mata AI menggunakan Shizuku (Rish) untuk mengambil screenshot sistem"""
-        img_path = "vision_input.png"
-        logger.info("[VISION] Memindai layar via Shizuku/Rish...")
+        """Mata AI mengambil screenshot dari layar virtual VNC"""
+        img_path = "virtual_vision.png"
+        logger.info("[VISION] Memindai layar virtual (VNC :1)...")
         
-        # Perintah sakti via Rish untuk menembus izin sistem
-        os.system(f"../rish -c 'screencap -p' > {img_path}")
+        # Mengambil screenshot dari display :1 menggunakan scrot
+        os.system(f"DISPLAY={self.display} scrot -o {img_path}")
         
         try:
             if os.path.exists(img_path) and os.path.getsize(img_path) > 0:
-                # OCR membaca angka saldo
                 text = pytesseract.image_to_string(Image.open(img_path))
-                logger.info(f"[VISION] Hasil Scan: {text[:50].replace('\n', ' ')}")
-                if "Rp" in text or "IDR" in text or "Saldo" in text:
+                logger.info(f"[VISION] Hasil Scan Virtual: {text[:50].replace('\n', ' ')}")
+                if "Rp" in text or "Saldo" in text:
                     return text
-            return "Saldo: Rp 0, Status: No Visual Data"
+            return "Saldo: Rp 0, Status: Virtual Screen Blank"
         except Exception as e:
             logger.error(f"[VISION] OCR Error: {e}")
-            return "Saldo: Rp 0, Status: Vision Error"
+            return "Saldo: Rp 0, Status: OCR Error"
+
+    def open_dashboard_virtual(self, url="https://admob.google.com"):
+        """Membuka dashboard di dalam layar virtual (Latar Belakang)"""
+        logger.info(f"[VNC] Membuka URL di latar belakang: {url}")
+        os.system(f"DISPLAY={self.display} chromium --no-sandbox --disable-gpu {url} &")
 
     def calculate_target(self, data):
         kurs_usd = 16000
         try:
-            # Mencari angka saldo dari teks OCR
             digits = "".join([c for c in data.split("Rp")[-1].split()[0] if c.isdigit()])
             saldo = int(digits) if digits else 0
-            usd = saldo / kurs_usd
             if saldo >= 111111:
-                return True, f"Rp {saldo:,} (${usd:.2f}) - TARGET TERCAPAI"
-            return False, f"Rp {saldo:,} (${usd:.2f}) - MENGEJAR TARGET"
-        except: return False, "Mencari saldo di layar..."
+                return True, f"Rp {saldo:,} - TARGET TERCAPAI"
+            return False, f"Rp {saldo:,} - MENGEJAR TARGET"
+        except: return False, "Mencari saldo di layar virtual..."
 
     def send_whatsapp_notification(self, message):
         logger.info("[WHATSAPP] Mengirim laporan...")
@@ -78,7 +92,7 @@ class AIAgent:
         if action_type == "WITHDRAW_DANA":
             exit_code = os.system("python3 ../dana_auto_full_flow.py")
             if exit_code == 0:
-                self.send_whatsapp_notification("*LAPORAN OMNI-AI*\n✅ Target Tercapai & Withdraw Sukses!")
+                self.send_whatsapp_notification("*LAPORAN OMNI-AI*\n✅ Penarikan Sukses via Virtual Vision!")
 
     def check_rest_period(self):
         now = datetime.now()
@@ -91,15 +105,18 @@ class AIAgent:
         return None, None
 
     def start_cycle(self):
+        # AI Membuka Dashboard AdMob di layar virtual saat start
+        self.open_dashboard_virtual()
+        
         while True:
             prayer_name, wake_up = self.check_rest_period()
             if prayer_name:
                 wait = (wake_up - datetime.now()).total_seconds()
-                logger.info(f"[REST] Waktu {prayer_name}. Memutar siaran spiritual...")
-                os.system("termux-open-url 'https://www.youtube.com/watch?v=FqXvB5V2Poo'")
+                logger.info(f"[REST] AI Beristirahat ({prayer_name})...")
+                # Bisa ditambahkan pemutar audio di sini
                 time.sleep(max(0, wait))
             
-            logger.info("[WORK] Menganalisis layar untuk target harian...")
+            logger.info("[WORK] Menganalisis target via Virtual Vision...")
             data = self.read_screen()
             tercapai, status_msg = self.calculate_target(data)
             logger.info(f"[STATUS] {status_msg}")
@@ -107,8 +124,8 @@ class AIAgent:
             if tercapai:
                 self.execute_action("WITHDRAW_DANA")
             else:
-                # Sync ke cloud jika belum tercapai
-                os.system("git add . && git commit -m 'Auto-Sync via Rish Vision' && git push origin master --force")
+                # Sync ke cloud
+                os.system("git add . && git commit -m 'Auto-Sync Virtual' && git push origin master --force")
             
             time.sleep(3600) # Cek setiap jam
 
