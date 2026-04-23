@@ -28,6 +28,17 @@ export default function App() {
     return unsubscribe;
   }, []);
 
+  const showInterstitial = () => {
+    if (loaded) {
+      interstitial.show();
+      setLoaded(false);
+      interstitial.load(); // Load next ad
+    } else {
+      alert("Iklan belum siap (Loading...)");
+      interstitial.load();
+    }
+  };
+
   const handleWithdraw = () => {
     alert("Permintaan Withdraw Dikirim ke:\n" + 
           "DANA: 085163707103\n" + 

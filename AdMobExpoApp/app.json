@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "AdMobExpoApp",
-    "slug": "AdMobExpoApp",
+    "name": "Al-Mudarrib Pro",
+    "slug": "Al-Mudarrib-Pro",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -20,7 +20,8 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.worksm658.admobexpo"
+      "package": "com.rahmatfala.almudarribpro",
+      "googleServicesFile": "./google-services.json"
     },
     "web": {
       "favicon": "./assets/favicon.png"

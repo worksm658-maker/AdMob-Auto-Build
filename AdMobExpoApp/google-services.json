@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "981274344536",
+    "project_id": "al-mudarrib-pro",
+    "storage_bucket": "al-mudarrib-pro.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:981274344536:android:319ed5540e155d8fdd1e2d",
+        "android_client_info": {
+          "package_name": "com.rahmatfala.almudarribpro"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8P8Et5-nztZUMWH5rbHdmr6may7UDAhM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
