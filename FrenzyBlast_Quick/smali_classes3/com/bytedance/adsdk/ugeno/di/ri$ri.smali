@@ -1,0 +1,195 @@
+.class Lcom/bytedance/adsdk/ugeno/di/ri$ri;
+.super Lcom/bytedance/adsdk/ugeno/mj/lr;
+.source "r8-map-id-7dfb0eae3f6702c581b77ce061402397ffc51803b9460e670aef0bc885b443a3"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/bytedance/adsdk/ugeno/di/ri;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1
+    name = "ri"
+.end annotation
+
+
+# instance fields
+.field final synthetic ri:Lcom/bytedance/adsdk/ugeno/di/ri;
+
+
+# direct methods
+.method public constructor <init>(Lcom/bytedance/adsdk/ugeno/di/ri;)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lcom/bytedance/adsdk/ugeno/di/ri$ri;->ri:Lcom/bytedance/adsdk/ugeno/di/ri;
+
+    .line 2
+    .line 3
+    invoke-direct {p0}, Lcom/bytedance/adsdk/ugeno/mj/lr;-><init>()V
+
+    .line 4
+    .line 5
+    .line 6
+    return-void
+.end method
+
+
+# virtual methods
+.method public ri(I)F
+    .locals 1
+
+    .line 33
+    iget-object p1, p0, Lcom/bytedance/adsdk/ugeno/di/ri$ri;->ri:Lcom/bytedance/adsdk/ugeno/di/ri;
+
+    invoke-static {p1}, Lcom/bytedance/adsdk/ugeno/di/ri;->lr(Lcom/bytedance/adsdk/ugeno/di/ri;)F
+
+    move-result p1
+
+    const/4 v0, 0x0
+
+    cmpg-float p1, p1, v0
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    if-gtz p1, :cond_0
+
+    return v0
+
+    .line 34
+    :cond_0
+    iget-object p1, p0, Lcom/bytedance/adsdk/ugeno/di/ri$ri;->ri:Lcom/bytedance/adsdk/ugeno/di/ri;
+
+    invoke-static {p1}, Lcom/bytedance/adsdk/ugeno/di/ri;->lr(Lcom/bytedance/adsdk/ugeno/di/ri;)F
+
+    move-result p1
+
+    div-float/2addr v0, p1
+
+    return v0
+.end method
+
+.method public ri()I
+    .locals 1
+
+    .line 30
+    iget-object v0, p0, Lcom/bytedance/adsdk/ugeno/di/ri$ri;->ri:Lcom/bytedance/adsdk/ugeno/di/ri;
+
+    invoke-static {v0}, Lcom/bytedance/adsdk/ugeno/di/ri;->ri(Lcom/bytedance/adsdk/ugeno/di/ri;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/16 v0, 0x400
+
+    return v0
+
+    :cond_0
+    iget-object v0, p0, Lcom/bytedance/adsdk/ugeno/di/ri$ri;->ri:Lcom/bytedance/adsdk/ugeno/di/ri;
+
+    iget-object v0, v0, Lcom/bytedance/adsdk/ugeno/di/ri;->ri:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public ri(Ljava/lang/Object;)I
+    .locals 0
+
+    .line 31
+    const/4 p1, -0x2
+
+    return p1
+.end method
+
+.method public ri(Landroid/view/ViewGroup;I)Ljava/lang/Object;
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lcom/bytedance/adsdk/ugeno/di/ri$ri;->ri:Lcom/bytedance/adsdk/ugeno/di/ri;
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/bytedance/adsdk/ugeno/di/ri;->ri(Lcom/bytedance/adsdk/ugeno/di/ri;)Z
+
+    .line 4
+    .line 5
+    .line 6
+    move-result v0
+
+    .line 7
+    iget-object v1, p0, Lcom/bytedance/adsdk/ugeno/di/ri$ri;->ri:Lcom/bytedance/adsdk/ugeno/di/ri;
+
+    .line 8
+    .line 9
+    iget-object v1, v1, Lcom/bytedance/adsdk/ugeno/di/ri;->ri:Ljava/util/List;
+
+    .line 10
+    .line 11
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    .line 12
+    .line 13
+    .line 14
+    move-result v1
+
+    .line 15
+    invoke-static {v0, p2, v1}, Lcom/bytedance/adsdk/ugeno/di/ka;->ri(ZII)I
+
+    .line 16
+    .line 17
+    .line 18
+    move-result v0
+
+    .line 19
+    iget-object v1, p0, Lcom/bytedance/adsdk/ugeno/di/ri$ri;->ri:Lcom/bytedance/adsdk/ugeno/di/ri;
+
+    .line 20
+    .line 21
+    invoke-virtual {v1, p2, v0}, Lcom/bytedance/adsdk/ugeno/di/ri;->ri(II)Landroid/view/View;
+
+    .line 22
+    .line 23
+    .line 24
+    move-result-object p2
+
+    .line 25
+    invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    .line 26
+    .line 27
+    .line 28
+    return-object p2
+.end method
+
+.method public ri(Landroid/view/ViewGroup;ILjava/lang/Object;)V
+    .locals 0
+
+    .line 32
+    check-cast p3, Landroid/view/View;
+
+    invoke-virtual {p1, p3}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method public ri(Landroid/view/View;Ljava/lang/Object;)Z
+    .locals 0
+
+    .line 29
+    if-ne p1, p2, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method

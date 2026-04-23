@@ -1,0 +1,202 @@
+version: 2.9.3
+apkFileName: FrenzyBlast.apk
+isFrameworkApk: false
+usesFramework:
+  ids:
+  tag: null
+sdkInfo:
+packageInfo:
+  forcedPackageId: null
+  renameManifestPackage: null
+versionInfo:
+  versionCode: null
+  versionName: null
+resourcesAreCompressed: false
+sharedLibrary: false
+sparseResources: false
+unknownFiles:
+  DebugProbesKt.bin: 8
+  core-common.properties: 8
+  firebase-analytics.properties: 8
+  firebase-measurement-connector.properties: 8
+  play-services-ads-api.properties: 8
+  play-services-ads-identifier.properties: 8
+  play-services-ads.properties: 8
+  play-services-appset.properties: 8
+  play-services-base.properties: 8
+  play-services-basement.properties: 8
+  play-services-cronet.properties: 8
+  play-services-measurement-api.properties: 8
+  play-services-measurement-base.properties: 8
+  play-services-measurement-impl.properties: 8
+  play-services-measurement-sdk-api.properties: 8
+  play-services-measurement-sdk.properties: 8
+  play-services-measurement.properties: 8
+  play-services-stats.properties: 8
+  play-services-tasks.properties: 8
+  review-ktx.properties: 8
+  review.properties: 8
+  user-messaging-platform.properties: 8
+  stamp-cert-sha256: 8
+  com/applovin/shadow/okhttp3/internal/publicsuffix/NOTICE: 8
+  com/applovin/shadow/okhttp3/internal/publicsuffix/publicsuffixes.gz: 0
+  google/protobuf/any.proto: 8
+  google/protobuf/api.proto: 8
+  google/protobuf/duration.proto: 8
+  google/protobuf/empty.proto: 8
+  google/protobuf/field_mask.proto: 8
+  google/protobuf/source_context.proto: 8
+  google/protobuf/struct.proto: 8
+  google/protobuf/timestamp.proto: 8
+  google/protobuf/type.proto: 8
+  google/protobuf/wrappers.proto: 8
+  okhttp3/internal/publicsuffix/NOTICE: 8
+  okhttp3/internal/publicsuffix/publicsuffixes.gz: 0
+  org/cocos2dx/okhttp3/internal/publicsuffix/publicsuffixes.gz: 0
+  src/google/protobuf/any.proto: 8
+  src/google/protobuf/api.proto: 8
+  src/google/protobuf/duration.proto: 8
+  src/google/protobuf/empty.proto: 8
+  src/google/protobuf/field_mask.proto: 8
+  src/google/protobuf/source_context.proto: 8
+  src/google/protobuf/struct.proto: 8
+  src/google/protobuf/timestamp.proto: 8
+  src/google/protobuf/type.proto: 8
+  src/google/protobuf/wrappers.proto: 8
+doNotCompress:
+- classes.dex
+- resources.arsc
+- META-INF/androidx.activity_activity-ktx.version
+- META-INF/androidx.activity_activity.version
+- META-INF/androidx.annotation_annotation-experimental.version
+- META-INF/androidx.appcompat_appcompat-resources.version
+- META-INF/androidx.appcompat_appcompat.version
+- META-INF/androidx.browser_browser.version
+- META-INF/androidx.cardview_cardview.version
+- META-INF/androidx.compose.runtime_runtime-annotation.version
+- META-INF/androidx.constraintlayout_constraintlayout.version
+- META-INF/androidx.coordinatorlayout_coordinatorlayout.version
+- META-INF/androidx.core_core-ktx.version
+- META-INF/androidx.core_core-viewtree.version
+- META-INF/androidx.core_core.version
+- META-INF/androidx.cursoradapter_cursoradapter.version
+- META-INF/androidx.customview_customview-poolingcontainer.version
+- META-INF/androidx.customview_customview.version
+- META-INF/androidx.databinding_viewbinding.version
+- META-INF/androidx.datastore_datastore-core.version
+- META-INF/androidx.datastore_datastore-preferences-core.version
+- META-INF/androidx.datastore_datastore-preferences.version
+- META-INF/androidx.datastore_datastore.version
+- META-INF/androidx.documentfile_documentfile.version
+- META-INF/androidx.drawerlayout_drawerlayout.version
+- META-INF/androidx.dynamicanimation_dynamicanimation.version
+- META-INF/androidx.emoji2_emoji2-views-helper.version
+- META-INF/androidx.emoji2_emoji2.version
+- META-INF/androidx.exifinterface_exifinterface.version
+- META-INF/androidx.fragment_fragment.version
+- META-INF/androidx.graphics_graphics-shapes.version
+- META-INF/androidx.interpolator_interpolator.version
+- META-INF/androidx.legacy_legacy-support-core-utils.version
+- META-INF/androidx.loader_loader.version
+- META-INF/androidx.localbroadcastmanager_localbroadcastmanager.version
+- META-INF/androidx.navigationevent_navigationevent.version
+- META-INF/androidx.print_print.version
+- META-INF/androidx.privacysandbox.ads_ads-adservices-java.version
+- META-INF/androidx.privacysandbox.ads_ads-adservices.version
+- META-INF/androidx.profileinstaller_profileinstaller.version
+- META-INF/androidx.recyclerview_recyclerview.version
+- META-INF/androidx.room_room-runtime.version
+- META-INF/androidx.savedstate_savedstate-ktx.version
+- META-INF/androidx.savedstate_savedstate.version
+- META-INF/androidx.sqlite_sqlite-framework.version
+- META-INF/androidx.sqlite_sqlite.version
+- META-INF/androidx.startup_startup-runtime.version
+- META-INF/androidx.tracing_tracing.version
+- META-INF/androidx.transition_transition.version
+- META-INF/androidx.vectordrawable_vectordrawable-animated.version
+- META-INF/androidx.vectordrawable_vectordrawable.version
+- META-INF/androidx.versionedparcelable_versionedparcelable.version
+- META-INF/androidx.viewpager2_viewpager2.version
+- META-INF/androidx.viewpager_viewpager.version
+- META-INF/androidx.webkit_webkit.version
+- META-INF/androidx.work_work-runtime-ktx.version
+- META-INF/androidx.work_work-runtime.version
+- META-INF/com.google.android.material_material.version
+- META-INF/kotlinx_coroutines_android.version
+- META-INF/kotlinx_coroutines_core.version
+- META-INF/kotlinx_coroutines_play_services.version
+- META-INF/services/r7.z
+- META-INF/services/s7.a
+- assets/assets/main/import/ba/ba21476f-2866-4f81-9c4d-6e359316e448.8bce7.json
+- assets/assets/res/import/09/096596a2-7610-4872-b691-52cbdcaec187.a2533.json
+- assets/assets/res/import/0e/0e3071ae-8a58-465c-a175-2bde786393b8.a2533.json
+- assets/assets/res/import/0e/0eaca33e-f978-4918-8efe-65dcb4743b7a.c16a8.json
+- assets/assets/res/import/12/122109ba6.90456.json
+- assets/assets/res/import/12/124a49291.2bf3d.json
+- assets/assets/res/import/12/12645f4a2.25a39.json
+- assets/assets/res/import/12/129d9213b.b3e4b.json
+- assets/assets/res/import/13/13423214-a499-443d-bf2c-ebbd07281402.c16a8.json
+- assets/assets/res/import/14/1485a45b-9472-4020-917a-1b8d5828dc86.a2533.json
+- assets/assets/res/import/15/15691c369.109ec.json
+- assets/assets/res/import/19/196f8809b.b3e4b.json
+- assets/assets/res/import/1f/1fbec03de.b3e4b.json
+- assets/assets/res/import/20/20835ba4-6145-4fbc-a58a-051ce700aa3e.a2533.json
+- assets/assets/res/import/20/20b1d108-62d6-47ea-8810-ac058c581f42.c16a8.json
+- assets/assets/res/import/24/24e6f573-6cdb-4bb1-9314-6684253d6a55.016da.json
+- assets/assets/res/import/25/25685f4d-2f9d-41a0-a88b-47d9e461ec41.52a6e.json
+- assets/assets/res/import/2a/2aa5b618-9d9b-4a86-9ea5-d51f5b5b2bd9.a2533.json
+- assets/assets/res/import/2b/2b33f96e-20f6-451d-90f2-d4cb7396cb2e.e45a2.json
+- assets/assets/res/import/30/300f61fb-c8f4-4394-a5fa-bd9bf169f2fa.a2533.json
+- assets/assets/res/import/39/39e7d64e-2e47-4137-9a83-0c2c80d139f6.c16a8.json
+- assets/assets/res/import/3b/3bdac1e9-cd9a-4535-b54a-3538aed5af56.a2533.json
+- assets/assets/res/import/41/41068d27-24e7-49e0-8a53-f344a93fbb93.a2533.json
+- assets/assets/res/import/46/46effc9f-c55c-4459-aa13-3754b3425d68.16e83.json
+- assets/assets/res/import/53/53022e19-7cca-4360-9b0d-96687d20913e.a2533.json
+- assets/assets/res/import/54/544e49d6-3f05-4fa8-9a9e-091f98fc2ce8.a2533.json
+- assets/assets/res/import/62/62e8f8fa-a5d8-4db9-8729-f9c35d6422b1.a2533.json
+- assets/assets/res/import/67/67474fb7-3537-4400-a02d-dc113ca180b5.a2533.json
+- assets/assets/res/import/6a/6a3205dc-e286-4db2-895f-1b92b9c79e2e.a2533.json
+- assets/assets/res/import/6d/6dfb963c-6cbb-4f6b-a1e5-07fd2e7857e7.c16a8.json
+- assets/assets/res/import/7c/7c12cf1e-84d0-4321-bfd8-63267ac6f99d.a2533.json
+- assets/assets/res/import/7c/7cafd537-4140-4470-9288-16b66bf79576.271f8.json
+- assets/assets/res/import/7d/7d8f9b89-4fd1-4c9f-a3ab-38ec7cded7ca.a2533.json
+- assets/assets/res/import/81/818b03df-defb-4ff2-853a-d5285e79fa29.c16a8.json
+- assets/assets/res/import/95/951249e0-9f16-456d-8b85-a6ca954da16b.a2533.json
+- assets/assets/res/import/95/95f013f8-86ab-4e3a-8512-f270b9782eef.c16a8.json
+- assets/assets/res/import/96/96b68ed3-c669-4a1d-8de8-bdc6e11e43dc.2dc06.json
+- assets/assets/res/import/a6/a659b53e-299e-443e-b2d6-fbe109cc044e.a2533.json
+- assets/assets/res/import/af/afc47931-f066-46b0-90be-9fe61f213428.a2533.json
+- assets/assets/res/import/b2/b2ac77ec-c242-4ac1-a611-a8b15274ac04.bec56.json
+- assets/assets/res/import/bd/bd1bcaba-bd7d-4a71-b143-997c882383e4.a2533.json
+- assets/assets/res/import/c3/c308c60c-00f7-4af3-94bf-ef757c9d0419.a2533.json
+- assets/assets/res/import/d4/d424027b-bf59-4f07-8f15-f7fa64f3766d.24887.json
+- assets/assets/res/import/d4/d4f5fadf-49e6-4c31-ac4b-839f50c39f24.a2533.json
+- assets/assets/res/import/df/dfc4d1ca-04c9-4f84-9f34-cab6078a136a.c16a8.json
+- assets/assets/res/import/e6/e66cb7d2-1f97-4760-a6d3-066d5bcc0673.c16a8.json
+- assets/assets/res/import/ea/eae9564e-7a47-4eb8-9c05-5e404aa97f48.a2533.json
+- assets/assets/res/import/ec/ec5a709b-7e2e-41c8-a476-e103e8692d7e.5790f.json
+- assets/assets/res/import/ef/ef2edb5e-ed40-4c59-9ec7-06b4dc5cb597.49fb7.json
+- assets/assets/res/import/fb/fb3ba827-85a9-4ef9-a887-164370fc5aa0.c16a8.json
+- assets/assets/res/import/ff/ffb88a8f-af62-48f4-8f1d-3cb606443a43.a2533.json
+- png
+- jpg
+- assets/assets/resources/import/07/0704a113-2e64-4aa3-a106-eaa167f59d5b.4d077.json
+- assets/assets/resources/import/18/18d134700.84aa2.json
+- assets/assets/resources/import/18/18d134700@6c48a.bfa54.json
+- assets/assets/resources/import/1b/1bb87ba9-6522-49e3-8f3e-1736b693e0ab.a9f2b.json
+- assets/assets/resources/import/47/47f42361-da10-4f03-bc5c-ea71aae9033a.976a9.json
+- assets/assets/resources/import/62/62c2e255-553e-42b6-b007-832bba6d4624.aee7f.json
+- assets/assets/resources/import/70/70d90be8-5415-4217-aebb-adb70db83579.57fc7.json
+- assets/assets/resources/import/75/75e747f9-3731-46a5-93ce-91fa0534d877.1c26f.json
+- assets/assets/resources/import/7f/7f7e3a84-ad42-4369-b29b-3bffb256e528.8f6e8.json
+- assets/assets/resources/import/89/89e293c1-6f4c-4e9c-9708-e88a5724cf01.f848e.json
+- assets/assets/resources/import/8e/8ec1e81d-e942-43cb-a2a8-39127f08bbc6.56064.json
+- assets/assets/resources/import/9c/9c4c5f81-10d5-43cf-a770-9a27d3ef8ebe.27b1d.json
+- assets/assets/resources/import/a9/a936e728-5c1d-46d8-95ad-c6c840d6ca3b.7c634.json
+- assets/assets/resources/import/d0/d003f629-d29e-4c0d-bd2f-678c27a873a7.a7975.json
+- assets/assets/resources/import/ed/eda72609-5c12-4d30-97f9-c3ced533964f.0a788.json
+- mp3
+- assets/dexopt/baseline.prof
+- assets/dexopt/baseline.profm
+- assets/src/import-map.1b792.json
+- webp

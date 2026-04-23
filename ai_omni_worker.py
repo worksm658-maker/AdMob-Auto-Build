@@ -4,131 +4,182 @@ import logging
 import os
 import random
 import pytesseract
+import subprocess
+import pickle
 from PIL import Image
 from datetime import datetime, timedelta
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium_stealth import stealth
 
-# Konfigurasi Logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - [%(levelname)s] - %(message)s')
-logger = logging.getLogger("Omni-AI-Worker")
+# =============================================================================
+# BISMILLAHIRRAHMANIRRAHIM
+# OMNI-AI MASTER CORE v7.1: AGGRESSIVE REVENUE NAVIGATOR
+# Feature: JS Menu Injection, Coordinate Auto-Clicker, & Persistent Metadata
+# =============================================================================
 
-class AIMemory:
-    def __init__(self, memory_file="ai_memory.json"):
-        self.memory_file = memory_file
-        self.memory = self.load_memory()
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - [OMNI-MASTER-V7.1] - %(message)s')
+logger = logging.getLogger("OmniCore")
 
-    def load_memory(self):
-        if os.path.exists(self.memory_file):
-            with open(self.memory_file, 'r') as f:
-                return json.load(f)
-        return {"history": [], "facts": {}, "withdrawal_history": []}
+class OmniAI:
+    def __init__(self):
+        self.display = ":1"
+        self.rish = "export RISH_APPLICATION_ID=com.termux && ~/rish"
+        self.cookie_path = "/data/data/com.termux/files/home/aibashira_profile/google_com_cookies.pkl"
+        self.email = "worksm658@gmail.com"
+        self.password = "Arahmat_91"
+        self.kurs_usd = 16000
+        self.daily_target = random.randint(160000, 1500000) # $10 - $99
+        self.total_withdrawn_today = 0
+        
+        self.last_screen_text = ""
+        self.stagnant_count = 0
+        self.memory = {"last_action": None, "seen_dialogs": [], "session_active": False}
+        
+        self.app_thresholds = {
+            "com.animalcarnaval.frenzyblast": 200, "com.mysoft.dailycash": 1000,
+            "com.omndev.mqgame.globeblast": 200, "com.watermelon.merge": 200,
+            "com.NAMMUNIS.GoldCombo": 1000, "com.bigbeardminer.slots": 5000
+        }
+        self.setup_shield()
 
-    def remember(self, key, value):
-        self.memory["facts"][key] = value
-        self.save_memory()
-        logger.info(f"[MENGINGAT] {key}: {value}")
+    def run_shizuku(self, cmd):
+        return os.popen(f"{self.rish} -c \"{cmd}\"").read().strip()
 
-    def save_memory(self):
-        with open(self.memory_file, 'w') as f:
-            json.dump(self.memory, f, indent=4)
+    def speak(self, text):
+        logger.info(f"[VOICE] {text}")
+        os.system(f"termux-tts-speak \"{text}\"")
 
-class AIAgent:
-    def __init__(self, role="Manager & Developer"):
-        self.role = role
-        self.memory = AIMemory()
-        self.display = ":1" # Display Virtual
-        logger.info(f"=== Omni-AI Agent 24 Jam (VNC Virtual Vision) ===")
-        self.setup_vnc()
-
-    def setup_vnc(self):
-        """Menyiapkan Server VNC untuk Layar Virtual"""
-        logger.info("[VNC] Memastikan server layar virtual aktif...")
-        # Cek jika lock file ada (VNC sedang berjalan)
+    def setup_shield(self):
+        logger.info("[SHIELD] Mengaktifkan perlindungan v7.1...")
         if not os.path.exists("/data/data/com.termux/files/usr/tmp/.X1-lock"):
             os.system(f"vncserver {self.display} -geometry 1280x720 -depth 24")
-            logger.info("[VNC] Server dimulai pada display :1")
-        else:
-            logger.info("[VNC] Server sudah berjalan.")
+        os.system("termux-wake-lock")
+        os.system("am start -n com.termux.api/.activities.TermuxAPIMainActivity")
+        if not os.popen("pgrep scrcpy").read().strip():
+            os.system(f"DISPLAY={self.display} GALLIUM_DRIVER=virpipe scrcpy -m 1024 --always-on-top --window-title 'OMNI_V7.1_VISION' &")
 
-    def read_screen(self):
-        """Mata AI mengambil screenshot dari layar virtual VNC"""
-        img_path = "virtual_vision.png"
-        logger.info("[VISION] Memindai layar virtual (VNC :1)...")
+    def dismiss_dialogs(self):
+        """Aggressive Auto-Clicker: Menembus Menu Dashboard"""
+        logger.info("[SHIELD] Dialog Killer & Menu Navigator dipicu.")
+        self.run_shizuku("input keyevent 66") # Enter
+        # Koordinat Menu Hamburger (Kiri Atas)
+        self.run_shizuku("input tap 50 150") 
+        time.sleep(2)
+        # Koordinat Menu Home/Payments (Sidebar)
+        self.run_shizuku("input tap 300 300") 
+        self.run_shizuku("input keyevent 4") # Back fallback
+
+    def save_metadata(self, driver):
+        cookies = driver.get_cookies()
+        with open(self.cookie_path, "wb") as f:
+            pickle.dump(cookies, f)
+        logger.info("[METADATA] Sesi persisten berhasil diamankan.")
+
+    def force_login_admob(self):
+        """Metode v7.3: Deep Navigation dengan Path Manual Termux"""
+        logger.info("[AUTH] Memulai Deep Navigation v7.3...")
+        chrome_options = Options()
+        chrome_options.binary_location = "/data/data/com.termux/files/usr/bin/chromium"
+        chrome_options.add_argument("--no-sandbox")
+        chrome_options.add_argument("--disable-gpu")
+        chrome_options.add_argument(f"--display={self.display}")
         
-        # Mengambil screenshot dari display :1 menggunakan scrot
-        os.system(f"DISPLAY={self.display} scrot -o {img_path}")
+        service = Service(executable_path="/data/data/com.termux/files/usr/bin/chromedriver")
+        driver = webdriver.Chrome(service=service, options=chrome_options)
         
         try:
-            if os.path.exists(img_path) and os.path.getsize(img_path) > 0:
-                text = pytesseract.image_to_string(Image.open(img_path))
-                logger.info(f"[VISION] Hasil Scan Virtual: {text[:50].replace('\n', ' ')}")
-                if "Rp" in text or "Saldo" in text:
-                    return text
-            return "Saldo: Rp 0, Status: Virtual Screen Blank"
+            # 1. Inisialisasi Domain
+            driver.get("https://apps.admob.com")
+            time.sleep(5)
+
+            
+            # 2. Injeksi Cookies dari Storage
+            if os.path.exists(self.cookie_path):
+                with open(self.cookie_path, "rb") as f:
+                    cookies = pickle.load(f)
+                    for cookie in cookies:
+                        try: driver.add_cookie(cookie)
+                        except: pass
+                logger.info("[METADATA] Cookies disuntikkan ke sesi browser.")
+            
+            # 3. Navigasi Langsung ke Dashboard Dalam
+            self.speak("Menuju rincian saldo harian.")
+            driver.get("https://apps.admob.com/v2/home")
+            time.sleep(10)
+            
+            # 4. Validasi Keberhasilan & Simpan Metadata Baru
+            if "home" in driver.current_url:
+                logger.info("[AUTH] Deep Navigation Berhasil!")
+                self.save_metadata(driver)
+                return True
         except Exception as e:
-            logger.error(f"[VISION] OCR Error: {e}")
-            return "Saldo: Rp 0, Status: OCR Error"
+            logger.error(f"[AUTH] Deep Nav Error: {e}")
+            return False
+        finally:
+            driver.quit()
 
-    def open_dashboard_virtual(self, url="https://admob.google.com"):
-        """Membuka dashboard di dalam layar virtual (Latar Belakang)"""
-        logger.info(f"[VNC] Membuka URL di latar belakang: {url}")
-        os.system(f"DISPLAY={self.display} chromium --no-sandbox --disable-gpu {url} &")
 
-    def calculate_target(self, data):
-        kurs_usd = 16000
+    def analyze_and_reason(self):
+        img_path = "live_v7_stream.png"
+        os.system(f"DISPLAY={self.display} scrot -o {img_path}")
         try:
-            digits = "".join([c for c in data.split("Rp")[-1].split()[0] if c.isdigit()])
-            saldo = int(digits) if digits else 0
-            if saldo >= 111111:
-                return True, f"Rp {saldo:,} - TARGET TERCAPAI"
-            return False, f"Rp {saldo:,} - MENGEJAR TARGET"
-        except: return False, "Mencari saldo di layar virtual..."
-
-    def send_whatsapp_notification(self, message):
-        logger.info("[WHATSAPP] Mengirim laporan...")
-        os.system(f"python3 ../whatsapp_business_master.py --send '{message}'")
-
-    def execute_action(self, action_type):
-        logger.info(f"[EKSEKUSI] {action_type}")
-        if action_type == "WITHDRAW_DANA":
-            exit_code = os.system("python3 ../dana_auto_full_flow.py")
-            if exit_code == 0:
-                self.send_whatsapp_notification("*LAPORAN OMNI-AI*\n✅ Penarikan Sukses via Virtual Vision!")
-
-    def check_rest_period(self):
-        now = datetime.now()
-        prayer_times = {"Tahajjud": "03:00", "Subuh": "04:45", "Dhuhur": "12:00", "Ashar": "15:15", "Maghrib": "18:00", "Isya": "19:15"}
-        for name, p_time in prayer_times.items():
-            p_hour, p_min = map(int, p_time.split(":"))
-            start_rest = now.replace(hour=p_hour, minute=p_min, second=0, microsecond=0)
-            duration = timedelta(minutes=99, seconds=9) if name == "Tahajjud" else timedelta(hours=1, minutes=11, seconds=1)
-            if start_rest <= now <= (start_rest + duration): return name, (start_rest + duration)
-        return None, None
-
-    def start_cycle(self):
-        # AI Membuka Dashboard AdMob di layar virtual saat start
-        self.open_dashboard_virtual()
-        
-        while True:
-            prayer_name, wake_up = self.check_rest_period()
-            if prayer_name:
-                wait = (wake_up - datetime.now()).total_seconds()
-                logger.info(f"[REST] AI Beristirahat ({prayer_name})...")
-                # Bisa ditambahkan pemutar audio di sini
-                time.sleep(max(0, wait))
+            img = Image.open(img_path)
+            raw_text = pytesseract.image_to_string(img).strip()
+            data = pytesseract.image_to_data(img, output_type='dict')
             
-            logger.info("[WORK] Menganalisis target via Virtual Vision...")
-            data = self.read_screen()
-            tercapai, status_msg = self.calculate_target(data)
-            logger.info(f"[STATUS] {status_msg}")
-            
-            if tercapai:
-                self.execute_action("WITHDRAW_DANA")
+            if raw_text == self.last_screen_text and len(raw_text) > 5:
+                self.stagnant_count += 1
             else:
-                # Sync ke cloud
-                os.system("git add . && git commit -m 'Auto-Sync Virtual' && git push origin master --force")
+                self.stagnant_count = 0
+                self.last_screen_text = raw_text
+
+            # Dialog & Reward Recognition
+            keywords = ["ok", "allow", "close", "claim", "bonus", "get", "klaim", "terima"]
+            for i, word in enumerate(data['text']):
+                if word.lower() in keywords:
+                    x, y = data['left'][i] + data['width'][i]//2, data['top'][i] + data['height'][i]//2
+                    return "interact", (x, y)
+
+            if self.stagnant_count >= 3:
+                return "fix_stagnant", None
+
+            return "explore", None
+        except: return "wait", None
+
+    def start_omni_work(self):
+        self.speak("Omni A I v 7 point 1 aktif. Memulai navigasi pendapatan agresif.")
+        # Jalankan penembusan awal
+        self.force_login_admob()
+
+        while True:
+            self.run_shizuku("cmd connectivity airplane-mode enable")
+            time.sleep(2); self.run_shizuku("cmd connectivity airplane-mode disable")
+            time.sleep(8)
+
+            app = random.choice(list(self.app_thresholds.keys()))
+            self.speak(f"Meneliti unit {app.split('.')[-1]}")
+            self.run_shizuku(f"monkey -p {app} -c android.intent.category.LAUNCHER 1")
             
-            time.sleep(3600) # Cek setiap jam
+            work_end = datetime.now() + timedelta(minutes=15)
+            while datetime.now() < work_end:
+                action, payload = self.analyze_and_reason()
+                if action == "interact":
+                    self.run_shizuku(f"input tap {payload[0]} {payload[1]}")
+                elif action == "fix_stagnant":
+                    self.dismiss_dialogs()
+                else:
+                    self.run_shizuku(f"input tap {random.randint(300,700)} {random.randint(500,1200)}")
+                time.sleep(random.randint(2, 5))
+
+            self.run_shizuku(f"am force-stop {app}")
+            os.system("git add . && git commit -m 'Omni-V7.1 Action Recorded' && git push origin master --force")
 
 if __name__ == "__main__":
-    agent = AIAgent()
-    agent.start_cycle()
+    omni = OmniAI()
+    omni.start_omni_work()

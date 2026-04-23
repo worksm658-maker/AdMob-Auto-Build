@@ -1,0 +1,169 @@
+.class public final Landroidx/lifecycle/RepeatOnLifecycleKt;
+.super Ljava/lang/Object;
+.source "r8-map-id-7dfb0eae3f6702c581b77ce061402397ffc51803b9460e670aef0bc885b443a3"
+
+
+# annotations
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000*\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u001aC\u0010\t\u001a\u00020\u0006*\u00020\u00002\u0006\u0010\u0002\u001a\u00020\u00012\"\u0010\u0008\u001a\u001e\u0008\u0001\u0012\u0004\u0012\u00020\u0004\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u00060\u0005\u0012\u0006\u0012\u0004\u0018\u00010\u00070\u0003H\u0086@\u00f8\u0001\u0000\u00a2\u0006\u0004\u0008\t\u0010\n\u001aC\u0010\t\u001a\u00020\u0006*\u00020\u000b2\u0006\u0010\u0002\u001a\u00020\u00012\"\u0010\u0008\u001a\u001e\u0008\u0001\u0012\u0004\u0012\u00020\u0004\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u00060\u0005\u0012\u0006\u0012\u0004\u0018\u00010\u00070\u0003H\u0086@\u00f8\u0001\u0000\u00a2\u0006\u0004\u0008\t\u0010\u000c\u0082\u0002\u0004\n\u0002\u0008\u0019\u00a8\u0006\r"
+    }
+    d2 = {
+        "Landroidx/lifecycle/Lifecycle;",
+        "Landroidx/lifecycle/Lifecycle$State;",
+        "state",
+        "Lkotlin/Function2;",
+        "Lr7/b0;",
+        "Lv6/c;",
+        "Lr6/w;",
+        "",
+        "block",
+        "repeatOnLifecycle",
+        "(Landroidx/lifecycle/Lifecycle;Landroidx/lifecycle/Lifecycle$State;Lf7/p;Lv6/c;)Ljava/lang/Object;",
+        "Landroidx/lifecycle/LifecycleOwner;",
+        "(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Lifecycle$State;Lf7/p;Lv6/c;)Ljava/lang/Object;",
+        "lifecycle-runtime-ktx_release"
+    }
+    k = 0x2
+    mv = {
+        0x1,
+        0x8,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# direct methods
+.method public static final repeatOnLifecycle(Landroidx/lifecycle/Lifecycle;Landroidx/lifecycle/Lifecycle$State;Lf7/p;Lv6/c;)Ljava/lang/Object;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroidx/lifecycle/Lifecycle;",
+            "Landroidx/lifecycle/Lifecycle$State;",
+            "Lf7/p;",
+            "Lv6/c;",
+            ")",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+
+    .line 1
+    sget-object v0, Landroidx/lifecycle/Lifecycle$State;->INITIALIZED:Landroidx/lifecycle/Lifecycle$State;
+
+    .line 2
+    .line 3
+    if-eq p1, v0, :cond_2
+
+    .line 4
+    .line 5
+    invoke-virtual {p0}, Landroidx/lifecycle/Lifecycle;->getCurrentState()Landroidx/lifecycle/Lifecycle$State;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    sget-object v1, Landroidx/lifecycle/Lifecycle$State;->DESTROYED:Landroidx/lifecycle/Lifecycle$State;
+
+    .line 10
+    .line 11
+    sget-object v2, Lr6/w;->a:Lr6/w;
+
+    .line 12
+    .line 13
+    if-ne v0, v1, :cond_0
+
+    .line 14
+    .line 15
+    return-object v2
+
+    .line 16
+    :cond_0
+    new-instance v0, Landroidx/lifecycle/q;
+
+    .line 17
+    .line 18
+    const/4 v1, 0x0
+
+    .line 19
+    invoke-direct {v0, p0, p1, p2, v1}, Landroidx/lifecycle/q;-><init>(Landroidx/lifecycle/Lifecycle;Landroidx/lifecycle/Lifecycle$State;Lf7/p;Lv6/c;)V
+
+    .line 20
+    .line 21
+    .line 22
+    invoke-static {v0, p3}, Lr7/d0;->h(Lf7/p;Lv6/c;)Ljava/lang/Object;
+
+    .line 23
+    .line 24
+    .line 25
+    move-result-object p0
+
+    .line 26
+    sget-object p1, Lw6/a;->a:Lw6/a;
+
+    .line 27
+    .line 28
+    if-ne p0, p1, :cond_1
+
+    .line 29
+    .line 30
+    return-object p0
+
+    .line 31
+    :cond_1
+    return-object v2
+
+    .line 32
+    :cond_2
+    const-string p0, "repeatOnLifecycle cannot start work with the INITIALIZED lifecycle state."
+
+    .line 33
+    .line 34
+    invoke-static {p0}, Lokhttp3/a;->r(Ljava/lang/String;)V
+
+    .line 35
+    .line 36
+    .line 37
+    const/4 p0, 0x0
+
+    .line 38
+    return-object p0
+.end method
+
+.method public static final repeatOnLifecycle(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Lifecycle$State;Lf7/p;Lv6/c;)Ljava/lang/Object;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroidx/lifecycle/LifecycleOwner;",
+            "Landroidx/lifecycle/Lifecycle$State;",
+            "Lf7/p;",
+            "Lv6/c;",
+            ")",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+
+    .line 39
+    invoke-interface {p0}, Landroidx/lifecycle/LifecycleOwner;->getLifecycle()Landroidx/lifecycle/Lifecycle;
+
+    move-result-object p0
+
+    invoke-static {p0, p1, p2, p3}, Landroidx/lifecycle/RepeatOnLifecycleKt;->repeatOnLifecycle(Landroidx/lifecycle/Lifecycle;Landroidx/lifecycle/Lifecycle$State;Lf7/p;Lv6/c;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lw6/a;->a:Lw6/a;
+
+    if-ne p0, p1, :cond_0
+
+    return-object p0
+
+    :cond_0
+    sget-object p0, Lr6/w;->a:Lr6/w;
+
+    return-object p0
+.end method

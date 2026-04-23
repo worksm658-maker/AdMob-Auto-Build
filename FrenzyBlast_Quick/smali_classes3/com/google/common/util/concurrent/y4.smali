@@ -1,0 +1,368 @@
+.class public final Lcom/google/common/util/concurrent/y4;
+.super Lcom/google/common/util/concurrent/f3;
+.source "r8-map-id-7dfb0eae3f6702c581b77ce061402397ffc51803b9460e670aef0bc885b443a3"
+
+
+# instance fields
+.field public final synthetic c:I
+
+.field public final synthetic d:Lcom/google/common/util/concurrent/z4;
+
+.field public final e:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Lcom/google/common/util/concurrent/z4;Lcom/google/common/util/concurrent/AsyncCallable;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/google/common/util/concurrent/y4;->c:I
+
+    .line 18
+    iput-object p1, p0, Lcom/google/common/util/concurrent/y4;->d:Lcom/google/common/util/concurrent/z4;
+
+    .line 19
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    .line 20
+    invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/google/common/util/concurrent/AsyncCallable;
+
+    iput-object p1, p0, Lcom/google/common/util/concurrent/y4;->e:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/google/common/util/concurrent/z4;Ljava/util/concurrent/Callable;)V
+    .locals 1
+
+    .line 1
+    const/4 v0, 0x1
+
+    .line 2
+    iput v0, p0, Lcom/google/common/util/concurrent/y4;->c:I
+
+    .line 3
+    .line 4
+    iput-object p1, p0, Lcom/google/common/util/concurrent/y4;->d:Lcom/google/common/util/concurrent/z4;
+
+    .line 5
+    .line 6
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    .line 7
+    .line 8
+    .line 9
+    invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object p1
+
+    .line 13
+    check-cast p1, Ljava/util/concurrent/Callable;
+
+    .line 14
+    .line 15
+    iput-object p1, p0, Lcom/google/common/util/concurrent/y4;->e:Ljava/lang/Object;
+
+    .line 16
+    .line 17
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/lang/Throwable;)V
+    .locals 1
+
+    .line 1
+    iget v0, p0, Lcom/google/common/util/concurrent/y4;->c:I
+
+    .line 2
+    .line 3
+    packed-switch v0, :pswitch_data_0
+
+    .line 4
+    .line 5
+    .line 6
+    iget-object v0, p0, Lcom/google/common/util/concurrent/y4;->d:Lcom/google/common/util/concurrent/z4;
+
+    .line 7
+    .line 8
+    invoke-virtual {v0, p1}, Lcom/google/common/util/concurrent/AbstractFuture;->setException(Ljava/lang/Throwable;)Z
+
+    .line 9
+    .line 10
+    .line 11
+    return-void
+
+    .line 12
+    :pswitch_0
+    iget-object v0, p0, Lcom/google/common/util/concurrent/y4;->d:Lcom/google/common/util/concurrent/z4;
+
+    .line 13
+    .line 14
+    invoke-virtual {v0, p1}, Lcom/google/common/util/concurrent/AbstractFuture;->setException(Ljava/lang/Throwable;)Z
+
+    .line 15
+    .line 16
+    .line 17
+    return-void
+
+    .line 18
+    nop
+
+    .line 19
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final d(Ljava/lang/Object;)V
+    .locals 1
+
+    .line 1
+    iget v0, p0, Lcom/google/common/util/concurrent/y4;->c:I
+
+    .line 2
+    .line 3
+    packed-switch v0, :pswitch_data_0
+
+    .line 4
+    .line 5
+    .line 6
+    iget-object v0, p0, Lcom/google/common/util/concurrent/y4;->d:Lcom/google/common/util/concurrent/z4;
+
+    .line 7
+    .line 8
+    invoke-virtual {v0, p1}, Lcom/google/common/util/concurrent/AbstractFuture;->set(Ljava/lang/Object;)Z
+
+    .line 9
+    .line 10
+    .line 11
+    return-void
+
+    .line 12
+    :pswitch_0
+    check-cast p1, Lcom/google/common/util/concurrent/ListenableFuture;
+
+    .line 13
+    .line 14
+    iget-object v0, p0, Lcom/google/common/util/concurrent/y4;->d:Lcom/google/common/util/concurrent/z4;
+
+    .line 15
+    .line 16
+    invoke-virtual {v0, p1}, Lcom/google/common/util/concurrent/AbstractFuture;->setFuture(Lcom/google/common/util/concurrent/ListenableFuture;)Z
+
+    .line 17
+    .line 18
+    .line 19
+    return-void
+
+    .line 20
+    nop
+
+    .line 21
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final h()Z
+    .locals 1
+
+    .line 1
+    iget v0, p0, Lcom/google/common/util/concurrent/y4;->c:I
+
+    .line 2
+    .line 3
+    packed-switch v0, :pswitch_data_0
+
+    .line 4
+    .line 5
+    .line 6
+    iget-object v0, p0, Lcom/google/common/util/concurrent/y4;->d:Lcom/google/common/util/concurrent/z4;
+
+    .line 7
+    .line 8
+    invoke-virtual {v0}, Lcom/google/common/util/concurrent/AbstractFuture;->isDone()Z
+
+    .line 9
+    .line 10
+    .line 11
+    move-result v0
+
+    .line 12
+    return v0
+
+    .line 13
+    :pswitch_0
+    iget-object v0, p0, Lcom/google/common/util/concurrent/y4;->d:Lcom/google/common/util/concurrent/z4;
+
+    .line 14
+    .line 15
+    invoke-virtual {v0}, Lcom/google/common/util/concurrent/AbstractFuture;->isDone()Z
+
+    .line 16
+    .line 17
+    .line 18
+    move-result v0
+
+    .line 19
+    return v0
+
+    .line 20
+    nop
+
+    .line 21
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final i()Ljava/lang/Object;
+    .locals 3
+
+    .line 1
+    iget v0, p0, Lcom/google/common/util/concurrent/y4;->c:I
+
+    .line 2
+    .line 3
+    packed-switch v0, :pswitch_data_0
+
+    .line 4
+    .line 5
+    .line 6
+    iget-object v0, p0, Lcom/google/common/util/concurrent/y4;->e:Ljava/lang/Object;
+
+    .line 7
+    .line 8
+    check-cast v0, Ljava/util/concurrent/Callable;
+
+    .line 9
+    .line 10
+    invoke-interface {v0}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v0
+
+    .line 14
+    return-object v0
+
+    .line 15
+    :pswitch_0
+    iget-object v0, p0, Lcom/google/common/util/concurrent/y4;->e:Ljava/lang/Object;
+
+    .line 16
+    .line 17
+    check-cast v0, Lcom/google/common/util/concurrent/AsyncCallable;
+
+    .line 18
+    .line 19
+    invoke-interface {v0}, Lcom/google/common/util/concurrent/AsyncCallable;->call()Lcom/google/common/util/concurrent/ListenableFuture;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object v1
+
+    .line 23
+    const-string v2, "AsyncCallable.call returned null instead of a Future. Did you mean to return immediateFuture(null)? %s"
+
+    .line 24
+    .line 25
+    invoke-static {v1, v2, v0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 26
+    .line 27
+    .line 28
+    move-result-object v0
+
+    .line 29
+    check-cast v0, Lcom/google/common/util/concurrent/ListenableFuture;
+
+    .line 30
+    .line 31
+    return-object v0
+
+    .line 32
+    nop
+
+    .line 33
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final j()Ljava/lang/String;
+    .locals 1
+
+    .line 1
+    iget v0, p0, Lcom/google/common/util/concurrent/y4;->c:I
+
+    .line 2
+    .line 3
+    packed-switch v0, :pswitch_data_0
+
+    .line 4
+    .line 5
+    .line 6
+    iget-object v0, p0, Lcom/google/common/util/concurrent/y4;->e:Ljava/lang/Object;
+
+    .line 7
+    .line 8
+    check-cast v0, Ljava/util/concurrent/Callable;
+
+    .line 9
+    .line 10
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v0
+
+    .line 14
+    return-object v0
+
+    .line 15
+    :pswitch_0
+    iget-object v0, p0, Lcom/google/common/util/concurrent/y4;->e:Ljava/lang/Object;
+
+    .line 16
+    .line 17
+    check-cast v0, Lcom/google/common/util/concurrent/AsyncCallable;
+
+    .line 18
+    .line 19
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object v0
+
+    .line 23
+    return-object v0
+
+    .line 24
+    nop
+
+    .line 25
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method

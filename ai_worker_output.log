@@ -1,84 +1,101 @@
-2026-04-22 22:41:53,629 - Omni-AI-Worker - [INFO] - === Omni-AI Agent 24 Jam (VNC Virtual Vision) ===
-2026-04-22 22:41:53,630 - Omni-AI-Worker - [INFO] - [VNC] Memastikan server layar virtual aktif...
-2026-04-22 22:41:53,631 - Omni-AI-Worker - [INFO] - [VNC] Server sudah berjalan.
-2026-04-22 22:41:53,632 - Omni-AI-Worker - [INFO] - [VNC] Membuka URL di latar belakang: https://admob.google.com
-2026-04-22 22:41:53,670 - Omni-AI-Worker - [INFO] - [WORK] Menganalisis target via Virtual Vision...
-2026-04-22 22:41:53,672 - Omni-AI-Worker - [INFO] - [VISION] Memindai layar virtual (VNC :1)...
-sh: scrot: inaccessible or not found
-2026-04-22 22:41:53,711 - Omni-AI-Worker - [INFO] - [STATUS] Rp 0 - MENGEJAR TARGET
-[10969:10969:0422/224154.906740:ERROR:./../src/base/files/file_path_watcher_inotify.cc:922] Failed to read /proc/sys/fs/inotify/max_user_watches
-[10968:10968:0422/224154.907555:ERROR:./../src/base/files/file_path_watcher_inotify.cc:922] Failed to read /proc/sys/fs/inotify/max_user_watches
-[10916:10976:0422/224155.161763:ERROR:./../src/base/files/file_path_watcher_inotify.cc:922] Failed to read /proc/sys/fs/inotify/max_user_watches
-[10916:10977:0422/224155.180534:ERROR:./../src/dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /data/data/com.termux/files/usr/var/run/dbus/system_bus_socket: No such file or directory
-[10916:10977:0422/224206.636445:ERROR:./../src/dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
-[10916:10977:0422/224207.294931:ERROR:./../src/dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /data/data/com.termux/files/usr/var/run/dbus/system_bus_socket: No such file or directory
-[10916:10977:0422/224207.295225:ERROR:./../src/dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /data/data/com.termux/files/usr/var/run/dbus/system_bus_socket: No such file or directory
-[10916:10977:0422/224207.308269:ERROR:./../src/dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
-[10916:11149:0422/224207.320149:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 11154: Permission denied (13)
-[10916:11149:0422/224208.932829:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 11180: Permission denied (13)
-[10916:10977:0422/224208.933232:ERROR:./../src/dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
-[11155:11155:0422/224208.947209:ERROR:./../src/base/memory/shared_memory_switch.cc:289] Failed global descriptor lookup: 7
-[10916:10916:0422/224209.327490:ERROR:./../src/dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
-[10916:10916:0422/224209.333094:ERROR:./../src/dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
-[10916:10977:0422/224209.328233:ERROR:./../src/dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
-[10916:10916:0422/224209.376823:ERROR:./../src/dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
-[10916:10916:0422/224209.395244:ERROR:./../src/dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
-[10916:10977:0422/224209.400729:ERROR:./../src/dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /data/data/com.termux/files/usr/var/run/dbus/system_bus_socket: No such file or directory
-[10916:10977:0422/224209.400957:ERROR:./../src/dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /data/data/com.termux/files/usr/var/run/dbus/system_bus_socket: No such file or directory
-[10916:10916:0422/224209.434679:ERROR:./../src/dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.Properties.GetAll: object_path= /org/freedesktop/UPower/devices/DisplayDevice: unknown error type: 
-[10916:10977:0422/224211.113092:ERROR:./../src/dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
-[10916:10977:0422/224211.281746:ERROR:./../src/dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
-[10916:10977:0422/224211.281838:ERROR:./../src/dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
-[10916:11149:0422/224211.936308:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 11299: Permission denied (13)
-[10916:11149:0422/224212.027412:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 11317: Permission denied (13)
-[10916:10916:0422/224212.868598:ERROR:./../src/dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
-[10916:10977:0422/224212.870780:ERROR:./../src/dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
-[10916:10916:0422/224213.175782:ERROR:./../src/dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
-[10916:10977:0422/224213.194121:ERROR:./../src/dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
-[10916:10916:0422/224213.267939:ERROR:./../src/dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
-[10916:10977:0422/224213.269070:ERROR:./../src/dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
-[10916:10916:0422/224213.353472:ERROR:./../src/dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
-[10916:10977:0422/224213.355918:ERROR:./../src/dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
-[10916:10916:0422/224213.388751:ERROR:./../src/dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
-[10916:11149:0422/224235.309893:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 11702: Permission denied (13)
-[10916:10977:0422/224239.232183:ERROR:./../src/google_apis/gcm/engine/registration_request.cc:292] Registration response error message: DEPRECATED_ENDPOINT
-[10916:10977:0422/224303.977973:ERROR:./../src/google_apis/gcm/engine/registration_request.cc:292] Registration response error message: DEPRECATED_ENDPOINT
-[10916:11149:0422/224312.149361:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 12612: Permission denied (13)
-[10916:11149:0422/224314.365712:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 12704: Permission denied (13)
-[10916:11149:0422/224317.574893:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 12759: Permission denied (13)
-[10916:11149:0422/224317.739434:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 12782: Permission denied (13)
-[10916:11149:0422/224322.115265:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 12818: Permission denied (13)
-[10916:11149:0422/224327.270604:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 12985: Permission denied (13)
-[10916:11149:0422/224329.067070:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 13011: Permission denied (13)
-[10916:11149:0422/224330.239935:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 13050: Permission denied (13)
-[10916:11149:0422/224335.047125:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 13176: Permission denied (13)
-[master 6be182553] Auto-Sync Virtual
- 2 files changed, 83 insertions(+), 27 deletions(-)
-To https://github.com/worksm658-maker/AdMob-Auto-Build.git
-   f307ba743..6be182553  master -> master
-[10916:11149:0422/224339.928471:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 13286: Permission denied (13)
-[10916:11149:0422/224345.493954:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 13364: Permission denied (13)
-[10916:11149:0422/224348.272083:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 13398: Permission denied (13)
-[10916:10977:0422/224349.054299:ERROR:./../src/google_apis/gcm/engine/registration_request.cc:292] Registration response error message: DEPRECATED_ENDPOINT
-[10916:11149:0422/224349.320874:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 13424: Permission denied (13)
-[10916:11149:0422/224353.423107:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 13467: Permission denied (13)
-[10916:11149:0422/224357.484940:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 13695: Permission denied (13)
-Warning: vkCreateInstance: Found no drivers!
-Warning: vkCreateInstance failed with VK_ERROR_INCOMPATIBLE_DRIVER
-    at CheckVkSuccessImpl (../../../src/third_party/dawn/src/dawn/native/vulkan/VulkanError.cpp:106)
-
-Warning: Couldn't get proc eglChooseConfig
- - While trying to discover a BackendType::OpenGLES adapter.
-    at LoadClientProcs (../../../src/third_party/dawn/src/dawn/native/opengl/EGLFunctions.cpp:119)
-
-[10916:11149:0422/224414.201996:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 14022: Permission denied (13)
-[10916:11149:0422/224417.365507:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 14087: Permission denied (13)
-[10916:10977:0422/224541.209750:ERROR:./../src/google_apis/gcm/engine/registration_request.cc:292] Registration response error message: DEPRECATED_ENDPOINT
-[10916:10977:0422/224826.024904:ERROR:./../src/google_apis/gcm/engine/registration_request.cc:292] Registration response error message: DEPRECATED_ENDPOINT
-[10916:10977:0422/225604.147876:ERROR:./../src/google_apis/gcm/engine/registration_request.cc:292] Registration response error message: DEPRECATED_ENDPOINT
-[10916:11149:0422/230133.733531:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 27406: Permission denied (13)
-[10916:11149:0422/230133.900338:ERROR:./../src/content/browser/zygote_host/zygote_host_impl_linux.cc:279] Failed to adjust OOM score of renderer with pid 27418: Permission denied (13)
-2026-04-22 23:43:40,010 - Omni-AI-Worker - [INFO] - [WORK] Menganalisis target via Virtual Vision...
-2026-04-22 23:43:40,021 - Omni-AI-Worker - [INFO] - [VISION] Memindai layar virtual (VNC :1)...
-2026-04-22 23:43:44,906 - Omni-AI-Worker - [INFO] - [VISION] Hasil Scan Virtual: 2 Applications = @ Google AdMob - Eam M..  dMob - 
-2026-04-22 23:43:44,906 - Omni-AI-Worker - [INFO] - [STATUS] Rp 0 - MENGEJAR TARGET
+2026-04-23 16:42:47,885 - [OMNI-MASTER-V7.1] - [SHIELD] Mengaktifkan perlindungan v7.1...
+A VNC server is already running as :1
+Starting: Intent { cmp=com.termux.api/.activities.TermuxAPIMainActivity }
+2026-04-23 16:42:51,481 - [OMNI-MASTER-V7.1] - [VOICE] Omni A I v 7 point 1 aktif. Memulai navigasi pendapatan agresif.
+ERROR: Device could not be connected (state=offline)
+ERROR: Server connection failed
+scrcpy 3.3.4 <https://github.com/Genymobile/scrcpy>
+2026-04-23 17:01:48,366 - [OMNI-MASTER-V7.1] - [AUTH] Memulai Deep Navigation v7.3...
+2026-04-23 17:02:15,502 - [OMNI-MASTER-V7.1] - [METADATA] Cookies disuntikkan ke sesi browser.
+2026-04-23 17:02:15,508 - [OMNI-MASTER-V7.1] - [VOICE] Menuju rincian saldo harian.
+2026-04-23 17:03:43,624 - [OMNI-MASTER-V7.1] - [AUTH] Deep Navigation Berhasil!
+2026-04-23 17:03:43,673 - [OMNI-MASTER-V7.1] - [METADATA] Sesi persisten berhasil diamankan.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+2026-04-23 17:04:08,448 - [OMNI-MASTER-V7.1] - [VOICE] Meneliti unit dailycash
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+2026-04-23 17:05:47,285 - [OMNI-MASTER-V7.1] - [SHIELD] Dialog Killer & Menu Navigator dipicu.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+2026-04-23 17:07:00,127 - [OMNI-MASTER-V7.1] - [SHIELD] Dialog Killer & Menu Navigator dipicu.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+2026-04-23 17:09:00,584 - [OMNI-MASTER-V7.1] - [SHIELD] Dialog Killer & Menu Navigator dipicu.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+2026-04-23 17:10:53,443 - [OMNI-MASTER-V7.1] - [SHIELD] Dialog Killer & Menu Navigator dipicu.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+2026-04-23 17:12:53,130 - [OMNI-MASTER-V7.1] - [SHIELD] Dialog Killer & Menu Navigator dipicu.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+2026-04-23 17:14:52,188 - [OMNI-MASTER-V7.1] - [SHIELD] Dialog Killer & Menu Navigator dipicu.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+2026-04-23 17:16:53,902 - [OMNI-MASTER-V7.1] - [SHIELD] Dialog Killer & Menu Navigator dipicu.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+2026-04-23 17:18:56,821 - [OMNI-MASTER-V7.1] - [SHIELD] Dialog Killer & Menu Navigator dipicu.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.
+Request timeout. The connection between the current app (com.termux) and Shizuku app may be blocked by your system. Please disable all battery optimization features for both current app (com.termux) and Shizuku app.

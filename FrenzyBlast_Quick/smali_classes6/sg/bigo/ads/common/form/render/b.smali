@@ -1,0 +1,679 @@
+.class public final Lsg/bigo/ads/common/form/render/b;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lsg/bigo/ads/common/form/b$a;
+.implements Lsg/bigo/ads/common/form/render/c$a;
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lsg/bigo/ads/common/form/render/b$a;
+    }
+.end annotation
+
+
+# instance fields
+.field public final a:Landroid/content/Context;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
+
+.field public final b:Lsg/bigo/ads/ai/e;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
+
+.field public final c:Lsg/bigo/ads/bd/c;
+
+.field public d:Landroid/widget/Button;
+
+.field public e:Landroid/widget/RelativeLayout;
+
+.field f:J
+
+.field g:I
+
+.field final h:Ljava/lang/Runnable;
+
+.field private i:Z
+
+.field private final j:Ljava/lang/ref/WeakReference;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/ref/WeakReference<",
+            "Lsg/bigo/ads/common/form/render/b$a;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private k:I
+
+.field private l:[Z
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;Lsg/bigo/ads/ai/e;Ljava/util/Map;IILsg/bigo/ads/common/form/render/b$a;)V
+    .locals 3
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Lsg/bigo/ads/ai/e;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Ljava/util/Map;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Lsg/bigo/ads/ai/e;",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/Object;",
+            ">;II",
+            "Lsg/bigo/ads/common/form/render/b$a;",
+            ")V"
+        }
+    .end annotation
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 v0, 0x0
+
+    .line 5
+    iput-boolean v0, p0, Lsg/bigo/ads/common/form/render/b;->i:Z
+
+    .line 6
+    .line 7
+    const/16 v1, 0xd
+
+    .line 8
+    .line 9
+    new-array v1, v1, [Z
+
+    .line 10
+    .line 11
+    iput-object v1, p0, Lsg/bigo/ads/common/form/render/b;->l:[Z
+
+    .line 12
+    .line 13
+    new-instance v1, Lsg/bigo/ads/common/form/render/b$1;
+
+    .line 14
+    .line 15
+    invoke-direct {v1, p0}, Lsg/bigo/ads/common/form/render/b$1;-><init>(Lsg/bigo/ads/common/form/render/b;)V
+
+    .line 16
+    .line 17
+    .line 18
+    iput-object v1, p0, Lsg/bigo/ads/common/form/render/b;->h:Ljava/lang/Runnable;
+
+    .line 19
+    .line 20
+    iput-object p1, p0, Lsg/bigo/ads/common/form/render/b;->a:Landroid/content/Context;
+
+    .line 21
+    .line 22
+    iput-object p2, p0, Lsg/bigo/ads/common/form/render/b;->b:Lsg/bigo/ads/ai/e;
+
+    .line 23
+    .line 24
+    invoke-interface {p2}, Lsg/bigo/ads/ai/e;->d()I
+
+    .line 25
+    .line 26
+    .line 27
+    move-result v1
+
+    .line 28
+    const/4 v2, 0x1
+
+    .line 29
+    if-ne v1, v2, :cond_0
+
+    .line 30
+    .line 31
+    move v0, v2
+
+    .line 32
+    :cond_0
+    sput-boolean v0, Lsg/bigo/ads/common/form/render/a;->a:Z
+
+    .line 33
+    .line 34
+    new-instance v0, Lsg/bigo/ads/bd/c;
+
+    .line 35
+    .line 36
+    invoke-direct {v0, p2, p3, p1, p0}, Lsg/bigo/ads/bd/c;-><init>(Lsg/bigo/ads/ai/e;Ljava/util/Map;Landroid/content/Context;Lsg/bigo/ads/common/form/render/c$a;)V
+
+    .line 37
+    .line 38
+    .line 39
+    iput-object v0, p0, Lsg/bigo/ads/common/form/render/b;->c:Lsg/bigo/ads/bd/c;
+
+    .line 40
+    .line 41
+    new-instance p1, Ljava/lang/ref/WeakReference;
+
+    .line 42
+    .line 43
+    invoke-direct {p1, p6}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    .line 44
+    .line 45
+    .line 46
+    iput-object p1, p0, Lsg/bigo/ads/common/form/render/b;->j:Ljava/lang/ref/WeakReference;
+
+    .line 47
+    .line 48
+    iput p4, p0, Lsg/bigo/ads/common/form/render/b;->g:I
+
+    .line 49
+    .line 50
+    iput p5, p0, Lsg/bigo/ads/common/form/render/b;->k:I
+
+    .line 51
+    .line 52
+    return-void
+.end method
+
+.method public static a(Landroid/widget/TextView;Ljava/lang/String;)V
+    .locals 1
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    .line 44
+    if-nez p0, :cond_0
+
+    return-void
+
+    :cond_0
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    return-void
+
+    :cond_1
+    const/16 p1, 0x8
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
+
+    return-void
+.end method
+
+.method private d(Ljava/lang/String;)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lsg/bigo/ads/common/form/render/b;->j:Ljava/lang/ref/WeakReference;
+
+    .line 2
+    .line 3
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    if-eqz v0, :cond_0
+
+    .line 8
+    .line 9
+    iget-object v0, p0, Lsg/bigo/ads/common/form/render/b;->j:Ljava/lang/ref/WeakReference;
+
+    .line 10
+    .line 11
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object v0
+
+    .line 15
+    check-cast v0, Lsg/bigo/ads/common/form/render/b$a;
+
+    .line 16
+    .line 17
+    invoke-interface {v0, p1}, Lsg/bigo/ads/common/form/render/b$a;->a(Ljava/lang/String;)V
+
+    .line 18
+    .line 19
+    .line 20
+    :cond_0
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()V
+    .locals 5
+
+    .line 1
+    iget-object v0, p0, Lsg/bigo/ads/common/form/render/b;->d:Landroid/widget/Button;
+
+    .line 2
+    .line 3
+    if-eqz v0, :cond_0
+
+    .line 4
+    .line 5
+    iget-boolean v1, p0, Lsg/bigo/ads/common/form/render/b;->i:Z
+
+    .line 6
+    .line 7
+    if-nez v1, :cond_0
+
+    .line 8
+    .line 9
+    const/4 v1, 0x1
+
+    .line 10
+    invoke-virtual {v0, v1}, Landroid/view/View;->setEnabled(Z)V
+
+    .line 11
+    .line 12
+    .line 13
+    iget-object v0, p0, Lsg/bigo/ads/common/form/render/b;->d:Landroid/widget/Button;
+
+    .line 14
+    .line 15
+    sget v2, Lsg/bigo/ads/R$drawable;->bigo_ad_btn_background:I
+
+    .line 16
+    .line 17
+    invoke-virtual {v0, v2}, Landroid/view/View;->setBackgroundResource(I)V
+
+    .line 18
+    .line 19
+    .line 20
+    iget-object v0, p0, Lsg/bigo/ads/common/form/render/b;->d:Landroid/widget/Button;
+
+    .line 21
+    .line 22
+    const/4 v2, -0x1
+
+    .line 23
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setTextColor(I)V
+
+    .line 24
+    .line 25
+    .line 26
+    iput-boolean v1, p0, Lsg/bigo/ads/common/form/render/b;->i:Z
+
+    .line 27
+    .line 28
+    iget v0, p0, Lsg/bigo/ads/common/form/render/b;->g:I
+
+    .line 29
+    .line 30
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    .line 31
+    .line 32
+    .line 33
+    move-result-wide v1
+
+    .line 34
+    iget-wide v3, p0, Lsg/bigo/ads/common/form/render/b;->f:J
+
+    .line 35
+    .line 36
+    sub-long/2addr v1, v3
+
+    .line 37
+    const/4 v3, 0x2
+
+    .line 38
+    invoke-virtual {p0, v3, v0, v1, v2}, Lsg/bigo/ads/common/form/render/b;->a(IIJ)V
+
+    .line 39
+    .line 40
+    .line 41
+    :cond_0
+    return-void
+.end method
+
+.method public final a(I)V
+    .locals 4
+
+    .line 42
+    const/4 v0, 0x1
+
+    if-eq p1, v0, :cond_1
+
+    const/4 v0, 0x2
+
+    if-eq p1, v0, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    iget p1, p0, Lsg/bigo/ads/common/form/render/b;->g:I
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    iget-wide v2, p0, Lsg/bigo/ads/common/form/render/b;->f:J
+
+    sub-long/2addr v0, v2
+
+    const/16 v2, 0x8
+
+    :goto_0
+    invoke-virtual {p0, v2, p1, v0, v1}, Lsg/bigo/ads/common/form/render/b;->a(IIJ)V
+
+    goto :goto_1
+
+    :cond_1
+    iget p1, p0, Lsg/bigo/ads/common/form/render/b;->g:I
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    iget-wide v2, p0, Lsg/bigo/ads/common/form/render/b;->f:J
+
+    sub-long/2addr v0, v2
+
+    const/4 v2, 0x7
+
+    goto :goto_0
+
+    :goto_1
+    iget p1, p0, Lsg/bigo/ads/common/form/render/b;->k:I
+
+    invoke-static {p1}, Lsg/bigo/ads/common/form/a;->b(I)V
+
+    return-void
+.end method
+
+.method public final a(IIJ)V
+    .locals 2
+
+    .line 43
+    iget-object v0, p0, Lsg/bigo/ads/common/form/render/b;->l:[Z
+
+    array-length v1, v0
+
+    if-ge p1, v1, :cond_0
+
+    aget-boolean v0, v0, p1
+
+    if-nez v0, :cond_0
+
+    invoke-static {p1, p2, p3, p4}, Lsg/bigo/ads/cw/b;->a(IIJ)V
+
+    iget-object p2, p0, Lsg/bigo/ads/common/form/render/b;->l:[Z
+
+    const/4 p3, 0x1
+
+    aput-boolean p3, p2, p1
+
+    :cond_0
+    return-void
+.end method
+
+.method public final a(Ljava/lang/String;)V
+    .locals 5
+
+    .line 45
+    iget v0, p0, Lsg/bigo/ads/common/form/render/b;->g:I
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v1
+
+    iget-wide v3, p0, Lsg/bigo/ads/common/form/render/b;->f:J
+
+    sub-long/2addr v1, v3
+
+    const/16 v3, 0xb
+
+    invoke-virtual {p0, v3, v0, v1, v2}, Lsg/bigo/ads/common/form/render/b;->a(IIJ)V
+
+    invoke-direct {p0, p1}, Lsg/bigo/ads/common/form/render/b;->d(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final a(Ljava/util/Map;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/Object;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 46
+    iget v0, p0, Lsg/bigo/ads/common/form/render/b;->k:I
+
+    invoke-static {v0, p1}, Lsg/bigo/ads/common/form/a;->a(ILjava/util/Map;)V
+
+    return-void
+.end method
+
+.method public final b()V
+    .locals 5
+
+    .line 46
+    iget v0, p0, Lsg/bigo/ads/common/form/render/b;->g:I
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v1
+
+    iget-wide v3, p0, Lsg/bigo/ads/common/form/render/b;->f:J
+
+    sub-long/2addr v1, v3
+
+    const/4 v3, 0x5
+
+    invoke-virtual {p0, v3, v0, v1, v2}, Lsg/bigo/ads/common/form/render/b;->a(IIJ)V
+
+    return-void
+.end method
+
+.method public final b(I)V
+    .locals 3
+
+    .line 1
+    iget-object v0, p0, Lsg/bigo/ads/common/form/render/b;->j:Ljava/lang/ref/WeakReference;
+
+    .line 2
+    .line 3
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    if-eqz v0, :cond_0
+
+    .line 8
+    .line 9
+    iget-object v0, p0, Lsg/bigo/ads/common/form/render/b;->j:Ljava/lang/ref/WeakReference;
+
+    .line 10
+    .line 11
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object v0
+
+    .line 15
+    check-cast v0, Lsg/bigo/ads/common/form/render/b$a;
+
+    .line 16
+    .line 17
+    invoke-interface {v0}, Lsg/bigo/ads/common/form/render/b$a;->a()V
+
+    .line 18
+    .line 19
+    .line 20
+    :cond_0
+    iget-object v0, p0, Lsg/bigo/ads/common/form/render/b;->b:Lsg/bigo/ads/ai/e;
+
+    .line 21
+    .line 22
+    iget-object v1, p0, Lsg/bigo/ads/common/form/render/b;->c:Lsg/bigo/ads/bd/c;
+
+    .line 23
+    .line 24
+    invoke-virtual {v1}, Lsg/bigo/ads/bd/c;->b()Z
+
+    .line 25
+    .line 26
+    .line 27
+    move-result v1
+
+    .line 28
+    iget-object v2, p0, Lsg/bigo/ads/common/form/render/b;->c:Lsg/bigo/ads/bd/c;
+
+    .line 29
+    .line 30
+    invoke-virtual {v2}, Lsg/bigo/ads/bd/c;->a()Lorg/json/JSONObject;
+
+    .line 31
+    .line 32
+    .line 33
+    move-result-object v2
+
+    .line 34
+    invoke-static {v0, v1, v2}, Lsg/bigo/ads/common/form/a;->a(Lsg/bigo/ads/ai/e;ZLorg/json/JSONObject;)Ljava/util/Map;
+
+    .line 35
+    .line 36
+    .line 37
+    move-result-object v0
+
+    .line 38
+    invoke-static {}, Lsg/bigo/ads/common/form/b;->a()Lsg/bigo/ads/common/form/b;
+
+    .line 39
+    .line 40
+    .line 41
+    move-result-object v1
+
+    .line 42
+    invoke-virtual {v1, v0, p0, p1}, Lsg/bigo/ads/common/form/b;->a(Ljava/util/Map;Lsg/bigo/ads/common/form/b$a;I)V
+
+    .line 43
+    .line 44
+    .line 45
+    return-void
+.end method
+
+.method public final b(Ljava/lang/String;)V
+    .locals 5
+
+    .line 47
+    iget v0, p0, Lsg/bigo/ads/common/form/render/b;->g:I
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v1
+
+    iget-wide v3, p0, Lsg/bigo/ads/common/form/render/b;->f:J
+
+    sub-long/2addr v1, v3
+
+    const/16 v3, 0xa
+
+    invoke-virtual {p0, v3, v0, v1, v2}, Lsg/bigo/ads/common/form/render/b;->a(IIJ)V
+
+    invoke-direct {p0, p1}, Lsg/bigo/ads/common/form/render/b;->d(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final c()V
+    .locals 5
+
+    .line 19
+    iget v0, p0, Lsg/bigo/ads/common/form/render/b;->g:I
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v1
+
+    iget-wide v3, p0, Lsg/bigo/ads/common/form/render/b;->f:J
+
+    sub-long/2addr v1, v3
+
+    const/4 v3, 0x6
+
+    invoke-virtual {p0, v3, v0, v1, v2}, Lsg/bigo/ads/common/form/render/b;->a(IIJ)V
+
+    return-void
+.end method
+
+.method public final c(Ljava/lang/String;)V
+    .locals 5
+
+    .line 1
+    iget v0, p0, Lsg/bigo/ads/common/form/render/b;->g:I
+
+    .line 2
+    .line 3
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-wide v1
+
+    .line 7
+    iget-wide v3, p0, Lsg/bigo/ads/common/form/render/b;->f:J
+
+    .line 8
+    .line 9
+    sub-long/2addr v1, v3
+
+    .line 10
+    const/16 v3, 0x9
+
+    .line 11
+    .line 12
+    invoke-virtual {p0, v3, v0, v1, v2}, Lsg/bigo/ads/common/form/render/b;->a(IIJ)V
+
+    .line 13
+    .line 14
+    .line 15
+    invoke-direct {p0, p1}, Lsg/bigo/ads/common/form/render/b;->d(Ljava/lang/String;)V
+
+    .line 16
+    .line 17
+    .line 18
+    return-void
+.end method

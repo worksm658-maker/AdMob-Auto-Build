@@ -1,0 +1,276 @@
+.class Lcom/mbridge/msdk/config/component/load/downloader/database/a$e;
+.super Ljava/lang/Object;
+.source "r8-map-id-7dfb0eae3f6702c581b77ce061402397ffc51803b9460e670aef0bc885b443a3"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/mbridge/msdk/config/component/load/downloader/database/a;->remove(Ljava/lang/String;Ljava/lang/String;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Ljava/lang/String;
+
+.field final synthetic b:Ljava/lang/String;
+
+.field final synthetic c:Lcom/mbridge/msdk/config/component/load/downloader/database/a;
+
+
+# direct methods
+.method public constructor <init>(Lcom/mbridge/msdk/config/component/load/downloader/database/a;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
+
+    .line 1
+    iput-object p1, p0, Lcom/mbridge/msdk/config/component/load/downloader/database/a$e;->c:Lcom/mbridge/msdk/config/component/load/downloader/database/a;
+
+    .line 2
+    .line 3
+    iput-object p2, p0, Lcom/mbridge/msdk/config/component/load/downloader/database/a$e;->a:Ljava/lang/String;
+
+    .line 4
+    .line 5
+    iput-object p3, p0, Lcom/mbridge/msdk/config/component/load/downloader/database/a$e;->b:Ljava/lang/String;
+
+    .line 6
+    .line 7
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 8
+    .line 9
+    .line 10
+    return-void
+.end method
+
+
+# virtual methods
+.method public run()V
+    .locals 4
+
+    .line 1
+    const-string v0, " WHERE URL = ? AND filePath = ?"
+
+    .line 2
+    .line 3
+    const-string v1, "DELETE FROM "
+
+    .line 4
+    .line 5
+    iget-object v2, p0, Lcom/mbridge/msdk/config/component/load/downloader/database/a$e;->c:Lcom/mbridge/msdk/config/component/load/downloader/database/a;
+
+    .line 6
+    .line 7
+    invoke-static {v2}, Lcom/mbridge/msdk/config/component/load/downloader/database/a;->a(Lcom/mbridge/msdk/config/component/load/downloader/database/a;)Landroid/database/sqlite/SQLiteDatabase;
+
+    .line 8
+    .line 9
+    .line 10
+    move-result-object v2
+
+    .line 11
+    invoke-static {v2}, Lcom/mbridge/msdk/config/component/load/downloader/utils/a;->b(Ljava/lang/Object;)Z
+
+    .line 12
+    .line 13
+    .line 14
+    move-result v2
+
+    .line 15
+    if-eqz v2, :cond_0
+
+    .line 16
+    .line 17
+    iget-object v2, p0, Lcom/mbridge/msdk/config/component/load/downloader/database/a$e;->c:Lcom/mbridge/msdk/config/component/load/downloader/database/a;
+
+    .line 18
+    .line 19
+    invoke-static {v2}, Lcom/mbridge/msdk/config/component/load/downloader/database/a;->b(Lcom/mbridge/msdk/config/component/load/downloader/database/a;)Lcom/mbridge/msdk/config/component/load/downloader/database/d;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object v3
+
+    .line 23
+    invoke-interface {v3}, Lcom/mbridge/msdk/config/component/load/downloader/database/d;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+
+    .line 24
+    .line 25
+    .line 26
+    move-result-object v3
+
+    .line 27
+    invoke-static {v2, v3}, Lcom/mbridge/msdk/config/component/load/downloader/database/a;->a(Lcom/mbridge/msdk/config/component/load/downloader/database/a;Landroid/database/sqlite/SQLiteDatabase;)Landroid/database/sqlite/SQLiteDatabase;
+
+    .line 28
+    .line 29
+    .line 30
+    :cond_0
+    iget-object v2, p0, Lcom/mbridge/msdk/config/component/load/downloader/database/a$e;->c:Lcom/mbridge/msdk/config/component/load/downloader/database/a;
+
+    .line 31
+    .line 32
+    invoke-static {v2}, Lcom/mbridge/msdk/config/component/load/downloader/database/a;->a(Lcom/mbridge/msdk/config/component/load/downloader/database/a;)Landroid/database/sqlite/SQLiteDatabase;
+
+    .line 33
+    .line 34
+    .line 35
+    move-result-object v2
+
+    .line 36
+    invoke-static {v2}, Lcom/mbridge/msdk/config/component/load/downloader/utils/a;->b(Ljava/lang/Object;)Z
+
+    .line 37
+    .line 38
+    .line 39
+    move-result v2
+
+    .line 40
+    if-nez v2, :cond_2
+
+    .line 41
+    .line 42
+    iget-object v2, p0, Lcom/mbridge/msdk/config/component/load/downloader/database/a$e;->c:Lcom/mbridge/msdk/config/component/load/downloader/database/a;
+
+    .line 43
+    .line 44
+    invoke-static {v2}, Lcom/mbridge/msdk/config/component/load/downloader/database/a;->a(Lcom/mbridge/msdk/config/component/load/downloader/database/a;)Landroid/database/sqlite/SQLiteDatabase;
+
+    .line 45
+    .line 46
+    .line 47
+    move-result-object v2
+
+    .line 48
+    invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->isOpen()Z
+
+    .line 49
+    .line 50
+    .line 51
+    move-result v2
+
+    .line 52
+    if-nez v2, :cond_1
+
+    .line 53
+    .line 54
+    goto :goto_0
+
+    .line 55
+    :cond_1
+    :try_start_0
+    iget-object v2, p0, Lcom/mbridge/msdk/config/component/load/downloader/database/a$e;->c:Lcom/mbridge/msdk/config/component/load/downloader/database/a;
+
+    .line 56
+    .line 57
+    invoke-static {v2}, Lcom/mbridge/msdk/config/component/load/downloader/database/a;->a(Lcom/mbridge/msdk/config/component/load/downloader/database/a;)Landroid/database/sqlite/SQLiteDatabase;
+
+    .line 58
+    .line 59
+    .line 60
+    move-result-object v2
+
+    .line 61
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    .line 62
+    .line 63
+    invoke-direct {v3, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 64
+    .line 65
+    .line 66
+    iget-object v1, p0, Lcom/mbridge/msdk/config/component/load/downloader/database/a$e;->c:Lcom/mbridge/msdk/config/component/load/downloader/database/a;
+
+    .line 67
+    .line 68
+    invoke-static {v1}, Lcom/mbridge/msdk/config/component/load/downloader/database/a;->c(Lcom/mbridge/msdk/config/component/load/downloader/database/a;)Ljava/lang/String;
+
+    .line 69
+    .line 70
+    .line 71
+    move-result-object v1
+
+    .line 72
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 73
+    .line 74
+    .line 75
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 76
+    .line 77
+    .line 78
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 79
+    .line 80
+    .line 81
+    move-result-object v0
+
+    .line 82
+    iget-object v1, p0, Lcom/mbridge/msdk/config/component/load/downloader/database/a$e;->a:Ljava/lang/String;
+
+    .line 83
+    .line 84
+    iget-object v3, p0, Lcom/mbridge/msdk/config/component/load/downloader/database/a$e;->b:Ljava/lang/String;
+
+    .line 85
+    .line 86
+    filled-new-array {v1, v3}, [Ljava/lang/Object;
+
+    .line 87
+    .line 88
+    .line 89
+    move-result-object v1
+
+    .line 90
+    invoke-virtual {v2, v0, v1}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;[Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 91
+    .line 92
+    .line 93
+    return-void
+
+    .line 94
+    :catch_0
+    move-exception v0
+
+    .line 95
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    .line 96
+    .line 97
+    .line 98
+    move-result-object v0
+
+    .line 99
+    const-string v1, "DatabaseHelper"
+
+    .line 100
+    .line 101
+    invoke-static {v1, v0}, Lcom/mbridge/msdk/foundation/tools/q0;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 102
+    .line 103
+    .line 104
+    :cond_2
+    :goto_0
+    return-void
+.end method

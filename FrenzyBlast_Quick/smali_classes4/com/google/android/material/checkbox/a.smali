@@ -1,0 +1,115 @@
+.class public final Lcom/google/android/material/checkbox/a;
+.super Landroidx/vectordrawable/graphics/drawable/Animatable2Compat$AnimationCallback;
+.source "r8-map-id-7dfb0eae3f6702c581b77ce061402397ffc51803b9460e670aef0bc885b443a3"
+
+
+# instance fields
+.field public final synthetic a:Lcom/google/android/material/checkbox/MaterialCheckBox;
+
+
+# direct methods
+.method public constructor <init>(Lcom/google/android/material/checkbox/MaterialCheckBox;)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lcom/google/android/material/checkbox/a;->a:Lcom/google/android/material/checkbox/MaterialCheckBox;
+
+    .line 2
+    .line 3
+    invoke-direct {p0}, Landroidx/vectordrawable/graphics/drawable/Animatable2Compat$AnimationCallback;-><init>()V
+
+    .line 4
+    .line 5
+    .line 6
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onAnimationEnd(Landroid/graphics/drawable/Drawable;)V
+    .locals 1
+
+    .line 1
+    invoke-super {p0, p1}, Landroidx/vectordrawable/graphics/drawable/Animatable2Compat$AnimationCallback;->onAnimationEnd(Landroid/graphics/drawable/Drawable;)V
+
+    .line 2
+    .line 3
+    .line 4
+    iget-object v0, p0, Lcom/google/android/material/checkbox/a;->a:Lcom/google/android/material/checkbox/MaterialCheckBox;
+
+    .line 5
+    .line 6
+    iget-object v0, v0, Lcom/google/android/material/checkbox/MaterialCheckBox;->buttonTintList:Landroid/content/res/ColorStateList;
+
+    .line 7
+    .line 8
+    if-eqz v0, :cond_0
+
+    .line 9
+    .line 10
+    invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setTintList(Landroid/content/res/ColorStateList;)V
+
+    .line 11
+    .line 12
+    .line 13
+    :cond_0
+    return-void
+.end method
+
+.method public final onAnimationStart(Landroid/graphics/drawable/Drawable;)V
+    .locals 3
+
+    .line 1
+    invoke-super {p0, p1}, Landroidx/vectordrawable/graphics/drawable/Animatable2Compat$AnimationCallback;->onAnimationStart(Landroid/graphics/drawable/Drawable;)V
+
+    .line 2
+    .line 3
+    .line 4
+    iget-object v0, p0, Lcom/google/android/material/checkbox/a;->a:Lcom/google/android/material/checkbox/MaterialCheckBox;
+
+    .line 5
+    .line 6
+    iget-object v1, v0, Lcom/google/android/material/checkbox/MaterialCheckBox;->buttonTintList:Landroid/content/res/ColorStateList;
+
+    .line 7
+    .line 8
+    if-eqz v1, :cond_0
+
+    .line 9
+    .line 10
+    invoke-static {v0}, Lcom/google/android/material/checkbox/MaterialCheckBox;->access$000(Lcom/google/android/material/checkbox/MaterialCheckBox;)[I
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object v2
+
+    .line 14
+    iget-object v0, v0, Lcom/google/android/material/checkbox/MaterialCheckBox;->buttonTintList:Landroid/content/res/ColorStateList;
+
+    .line 15
+    .line 16
+    invoke-virtual {v0}, Landroid/content/res/ColorStateList;->getDefaultColor()I
+
+    .line 17
+    .line 18
+    .line 19
+    move-result v0
+
+    .line 20
+    invoke-virtual {v1, v2, v0}, Landroid/content/res/ColorStateList;->getColorForState([II)I
+
+    .line 21
+    .line 22
+    .line 23
+    move-result v0
+
+    .line 24
+    invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setTint(I)V
+
+    .line 25
+    .line 26
+    .line 27
+    :cond_0
+    return-void
+.end method
