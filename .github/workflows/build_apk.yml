@@ -21,9 +21,20 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    - name: Download Apktool
+    - name: Download Apktool (Self-Healing)
       run: |
-        curl -L https://github.com/iBotPeaches/Apktool/releases/download/v2.9.3/apktool_2.9.3.jar -o apktool.jar
+        URL="https://github.com/iBotPeaches/Apktool/releases/download/v2.9.3/apktool_2.9.3.jar"
+        echo "Mencoba mendownload dari link utama..."
+        if ! curl -L -f "$URL" -o apktool.jar; then
+          echo "Link utama mati (404). Mencari versi terbaru secara automatis..."
+          LATEST_URL=$(curl -s https://api.github.com/repos/iBotPeaches/Apktool/releases/latest | grep "browser_download_url.*jar" | cut -d '"' -f 4 | head -n 1)
+          echo "Mendownload versi terbaru dari: $LATEST_URL"
+          curl -L "$LATEST_URL" -o apktool.jar
+        fi
+        if [ ! -f "apktool.jar" ] || [ $(stat -c%s "apktool.jar") -lt 1000 ]; then
+          echo "ERROR: Gagal mendapatkan file Apktool yang valid."
+          exit 1
+        fi
 
     - name: Build Frenzy Blast
       run: |
